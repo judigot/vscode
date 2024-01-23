@@ -1,0 +1,233 @@
+{
+  /*====================EXTENSIONS====================*/ /*
+  Auto Close Tag - don't delete; autocloses HTML tags even in a string
+Auto Rename Tag - don't delete; autorenames HTML tags inside PHP files
+AWS Toolkit
+Backticks
+Bash IDE
+Bookmarks
+Code Runner
+Code Spell Checker
+Comment Box
+Compare Folders
+CSS Peek
+Dev Containers
+Docker
+DotENV
+EJS language support
+Error Lens
+ES7+ React/Redux/React-Native snippets
+ESLint
+GitLens - Git supercharged
+GraphQL: Language Feature Support
+GraphQL: Syntax Highlighting
+HashiCorp Terraform
+HTML CSS Support
+html to JSX
+Import Cost
+indent-rainbow
+Inline SQL
+IntelliCode
+IntelliCode API Usage Examples
+isort
+JavaScript (ES6) code snippets
+Jupyter
+Jupyter Cell Tags
+Jupyter Keymap
+Jupyter Notebook Renderers
+Jupyter Slide Show
+Live Server
+Local History
+Markdown All in One
+multi-command
+NGINX Configuration Language Support
+Paste HTML as JSX
+PHP Debug
+PHP Extension Pack
+PHP Intelephense
+Prettier - Code formatter
+Pretty TypeScript Errors
+Prisma
+Project Manager
+Pylance
+Python
+Quokka.js
+Rainbow CSV
+Remote - SSH
+Remote - SSH: Editing Configuration Files
+Remote Explorer
+Rest Client
+ShellCheck
+shell-format
+SQLTools
+SQLTools MySQL/MariaDB/TiDB
+Tabnine
+Tailwind CSS IntelliSense
+TypeScript Explicit Types
+VSCode React Refactor
+vscode-icons
+vscode-styled-components
+WSL
+XML Tools
+  /*====================EXTENSIONS====================*/
+  // Run updates only on VS Code startup
+  "update.mode": "default",
+  "git.path": "C:/apportable/Programming/PortableGit/bin/git.exe",
+  "local-history.path": "C:/apportable/App Data/VS Code",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.startupEditor": "newUntitledFile",
+  "sync.autoDownload": true,
+  "sync.autoUpload": true,
+  // "sync.forceUpload": true,
+  "sync.quietSync": true,
+  "terminal.integrated.profiles.windows": {
+    "C:/apportable/Programming/PortableGit/bin/bash.exe": {
+      "path": ["C:/apportable/Programming/PortableGit/bin/bash.exe"],
+      "icon": "terminal-bash"
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "C:/apportable/Programming/PortableGit/bin/bash.exe",
+  "terminal.integrated.env.windows": {
+    /* ADD THESE .BASHRC SETTINGS TO THESE FOLLOWING DIRECTORIES */ /*
+        C:/Users/Jude/.bashrc
+        //wsl.localhost/Ubuntu/home/judigot
+    /*
+    /*==========.BASHRC==========*/ /*
+    #!/bin/bash
+    export PATH="$PATH:/c/apportable/Programming/deno:/c/apportable/Programming/jdk/bin:/c/apportable/Programming/PortableGit/cmd:/c/apportable/Programming/Terraform:/c/apportable/Programming/nvm:/c/apportable/Programming/nodejs:/c/apportable/Programming/nodejs/node_modules/npm/bin:/c/apportable/Programming/sqlite:/c/Program Files/Docker/Docker/resources/bin:/c/ProgramData/DockerDesktop/version-bin:/c/Users/Admin/AppData/Local/ComposerSetup/bin:/c/Users/Admin/AppData/Roaming/Composer/vendor/bin"
+    /*==========.BASHRC==========*/
+    "PATH": "${env:PATH};C:/apportable/Programming/deno;C:/apportable/Programming/jdk/bin;C:/apportable/Programming/PortableGit/cmd;C:/apportable/Programming/Terraform;C:/apportable/Programming/nvm;C:/apportable/Programming/nodejs;C:/apportable/Programming/nodejs/node_modules/npm/bin;C:/apportable/Programming/sqlite;C:/Program Files/Docker/Docker/resources/bin;C:/ProgramData/DockerDesktop/version-bin;C:/Users/Admin/AppData/Local/ComposerSetup/bin;C:/Users/Admin/AppData/Roaming/Composer/vendor/bin",
+    "NVM_HOME": "C:/apportable/Programming/nvm",
+    "NVM_SYMLINK": "C:/apportable/Programming/nodejs"
+  },
+  /*NVM Settings (C:/judigot/Programming/Environment/nvm/settings.txt)
+
+  settings.txt:
+    root: C:/apportable/Programming/nvm
+    path: C:/apportable/Programming/nodejs
+    proxy: none
+    arch: 64
+
+   */
+  // "php.validate.executablePath": "C:/xampp/php/php.exe",
+  // Controls whether the built-in PHP language suggestions are enabled. The support suggests PHP globals and variables.
+  "php.suggest.basic": true,
+  // Enable/disable built-in PHP validation.
+  "php.validate.enable": true, // docker exec -i <PHP container name> php %*
+  // Whether the linter is run on save or on type.
+  "php.validate.run": "onSave",
+  "workbench.iconTheme": "vscode-icons",
+  "vsicons.dontShowNewVersionMessage": true,
+  "git.ignoreMissingGitWarning": true,
+  // "editor.formatOnSave": true,
+  // "editor.formatOnPaste": true,
+  // "editor.formatOnType": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "editor.linkedEditing": true,
+  // Prevent autocomplete when pressing "."
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "cSpell.userWords": ["chunkhash", "jsxdev", "nodir", "purgecss"],
+  "files.restoreUndoStack": false,
+  "files.exclude": {
+    "**/node_modules/**": true,
+    ".history": true,
+    "**/.history": true
+  },
+  // Action when clicking script name
+  "npm.scriptExplorerAction": "run",
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+    "java": "clear && cd $(echo $dirWithoutTrailingSlash | sed '/\\/\\//g') && javac $fileName && java $fileNameWithoutExt",
+    "javascript": "clear && deno run --check=all",
+    // "python": "clear && PYTHON_VERSION=$(echo $(python --version || python2 --version || python3 --version) | awk '{split($2, a, \".\"); print a[1]}'); clear; \"python$(echo $PYTHON_VERSION)\"",
+    "python": "clear && python3",
+    "ruby": "clear && ruby",
+    "typescript": "clear && deno run --check=all", // Add "start" before ts-node to run the file in external terminal
+    "yaml": "clear && docker compose --file $fileName up"
+  },
+  // Associate file extensions to a certain language
+  "files.associations": {
+    "*.code-snippets": "json",
+    "docker-compose*.yml": "yaml"
+    // "*.tpl": "html", // Smarty template engine
+  },
+  "explorer.autoReveal": false, // Prevents VS Code from scrolling to the opened file when closing a another file
+  "html.format.templating": true,
+  "code-runner.ignoreSelection": true,
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "javascript.suggest.completeFunctionCalls": true,
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative", // use @/ instead of ../ in import suggestions
+  "diffEditor.ignoreTrimWhitespace": false,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.confirmSync": false,
+  // "git.autofetch": true,
+  // "git.autofetchPeriod": 0,
+  "npm.enableRunFromFolder": true,
+  // Add semicolon or not
+  "prettier.semi": true,
+  "git.openRepositoryInParentFolders": "never",
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // User snippets suggestions at the top
+  "editor.snippetSuggestions": "top",
+  "explorer.compactFolders": false,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "aws.resources.enabledResources": ["AWS::EC2::VPC"],
+  "[nginx]": {
+    "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
+  },
+  "editor.smoothScrolling": true,
+  "quokka.showOutputOnStart": false,
+  // VS Code inside docker container doesn't fetch on file change, hence this setting
+  // "json.schemaDownload.enable": false // Removes JSON schema error. Temporary fix.
+  //=====FIRA CODE=====//
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "aws.suppressPrompts": {
+    "regionAddAutomatically": true
+  },
+  "editor.fontWeight": "bold", // Bold
+  //=====FIRA CODE=====//
+  //=====BRACKET PAIR COLORIZATION=====//
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  //=====BRACKET PAIR COLORIZATION=====//
+  "settingsSync.ignoredSettings": ["-git.path"],
+  "tabnine.experimentalAutoImports": true,
+  "security.allowedUNCHosts": ["wsl.localhost"]
+}
