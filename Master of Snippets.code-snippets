@@ -11,6 +11,36 @@
     "prefix": "convertBackslashToForwardslash",
     "body": ["${TM_SELECTED_TEXT/[\\\\]/\\//g}"]
   },
+  //====================MARKDOWN====================//
+  "Section Break (Markdown)": {
+    "prefix": "# =====================================",
+    "body": [
+      "",
+      "# =====================================",
+      "",
+      "",
+      "# ${1:Section Name}",
+      "",
+      ""
+    ],
+    "scope": "markdown"
+  },
+  "Plain Text (Markdown)": {
+    "prefix": "```",
+    "body": ["```", "$1", "```"],
+    "scope": "markdown"
+  },
+  "Bash Code (Markdown)": {
+    "prefix": "```bash",
+    "body": ["```bash", "$1", "```"],
+    "scope": "markdown"
+  },
+  "TypeScript/JavaScript Code (Markdown)": {
+    "prefix": "```tsx",
+    "body": ["```tsx", "$1", "```"],
+    "scope": "markdown"
+  },
+  //====================MARKDOWN====================//
   //====================PYTHON====================//
   "String Variable (Python)": {
     "prefix": "stringVariable",
