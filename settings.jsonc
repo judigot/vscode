@@ -42,6 +42,7 @@ Markdown All in One
 multi-command
 NGINX Configuration Language Support
 Paste HTML as JSX
+Paste JSON as Code
 PHP Debug
 PHP Extension Pack
 PHP Intelephense
@@ -228,6 +229,5 @@ XML Tools
   "editor.guides.bracketPairs": "active",
   //=====BRACKET PAIR COLORIZATION=====//
   "settingsSync.ignoredSettings": ["-git.path"],
-  "tabnine.experimentalAutoImports": true,
-  "security.allowedUNCHosts": ["wsl.localhost"]
+  "tabnine.experimentalAutoImports": true
 }
