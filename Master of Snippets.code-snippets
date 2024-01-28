@@ -1466,7 +1466,7 @@
   "Object Variable (TypeScript/JavaScript)": {
     "prefix": "objectVariable",
     "body": [
-      "const objectVariable = {",
+      "const ${1:objectVariable} = {",
       "  key1: 1,",
       "  key2: \"Value\",",
       "};"
