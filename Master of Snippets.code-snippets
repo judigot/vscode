@@ -43,27 +43,27 @@
   //====================MARKDOWN====================//
   //====================PYTHON====================//
   "String Variable (Python)": {
-    "prefix": "stringVariable",
+    "prefix": "varText; stringVariable",
     "body": ["${1:stringVariable} = \"${2:Hello, World!}\""],
     "scope": "python"
   },
   "Integer Number Variable (Python)": {
-    "prefix": "numberIntegerVariable",
+    "prefix": "varNumber; numberIntegerVariable",
     "body": ["${1:numberIntegerVariable} = ${2:100}"],
     "scope": "python"
   },
   "Float Number Variable (Python)": {
-    "prefix": "numberFloatVariable",
+    "prefix": "varDecimal; numberFloatVariable",
     "body": ["${1:numberFloatVariable} = ${2:3.14}"],
     "scope": "python"
   },
   "Boolean Variable (Python)": {
-    "prefix": "booleanVariable",
+    "prefix": "varBoolean; booleanVariable",
     "body": ["${1:booleanVariable} = ${2:True}"],
     "scope": "python"
   },
   "Object Variable (Python)": {
-    "prefix": "objectVariable",
+    "prefix": "varObject; objectVariable",
     "body": [
       "${1:objectVariable} = {",
       "    'key1': 1,",
@@ -73,7 +73,7 @@
     "scope": "python"
   },
   "Object Literal Variable (Python)": {
-    "prefix": "objectLiteralVariable",
+    "prefix": "varEnum; objectLiteralVariable; constant; objectConstant",
     "body": [
       "${1:objectLiteralVariable} = {",
       "    ${2:KEY_1}: '${3:Value 1}',",
@@ -83,17 +83,17 @@
     "scope": "python"
   },
   "String Array Variable (Python)": {
-    "prefix": "arrayOfStringsVariable",
+    "prefix": "varArrayOfText; arrayOfStringsVariable",
     "body": ["${1:arrayOfStringsVariable} = ['${2:Hello}', '${3:World!}']"],
     "scope": "python"
   },
   "Number Array Variable (Python)": {
-    "prefix": "arrayOfNumbersVariable",
+    "prefix": "varArrayOfNumbers; arrayOfNumbersVariable",
     "body": ["${1:arrayOfNumbersVariable} = [${2:1}, ${3:2}, ${4:3}, ${5:4}]"],
     "scope": "python"
   },
   "Object Array Variable (Python)": {
-    "prefix": "arrayOfObjectsVariable",
+    "prefix": "varArrayOfObjects; arrayOfObjectsVariable",
     "body": [
       "${1:arrayOfObjectsVariable} = [",
       "    {",
@@ -439,27 +439,27 @@
   //====================PYTHON====================//
   //====================JAVA====================//
   "String Variable (Java)": {
-    "prefix": "stringVariable",
+    "prefix": "varText; stringVariable",
     "body": ["String ${1:stringVariable} = \"${2:Hello, World!}\";"],
     "scope": "java"
   },
   "Integer Number Variable (Java)": {
-    "prefix": "numberIntegerVariable",
+    "prefix": "varNumber; numberIntegerVariable",
     "body": ["int ${1:numberIntegerVariable} = ${2:100};"],
     "scope": "java"
   },
   "Float Number Variable (Java)": {
-    "prefix": "numberFloatVariable",
+    "prefix": "varDecimal; numberFloatVariable",
     "body": ["float ${1:numberFloatVariable} = ${2:3.14f};"],
     "scope": "java"
   },
   "Boolean Variable (Java)": {
-    "prefix": "booleanVariable",
+    "prefix": "varBoolean; booleanVariable",
     "body": ["boolean ${1:booleanVariable} = ${2:true};"],
     "scope": "java"
   },
   "Object Variable (Java)": {
-    "prefix": "objectVariable",
+    "prefix": "varObject; objectVariable",
     "body": [
       "HashMap<String, Object> ${1:objectVariable} = new HashMap<>();",
       "${1:objectVariable}.put(\"key1\", 1);",
@@ -467,22 +467,31 @@
     ],
     "scope": "java"
   },
+  "Object Literal Variable (Java)": {
+    "prefix": "varEnum; objectLiteralVariable; constant; objectConstant",
+    "body": [
+      "Map<String, String> ${1:objectLiteralVariable}= new HashMap<>();",
+      "${1:objectLiteralVariable}.put(\"KEY_1\", \"Value 1\");",
+      "${1:objectLiteralVariable}.put(\"KEY_2\", \"Value 2\");"
+    ],
+    "scope": "java"
+  },
   "String Array Variable (Java)": {
-    "prefix": "arrayOfStringsVariable",
+    "prefix": "varArrayOfText; arrayOfStringsVariable",
     "body": [
       "String[] ${1:arrayOfStringsVariable} = new String[]{\"${2:Hello}\", \"${3:World!}\"};"
     ],
     "scope": "java"
   },
   "Number Array Variable (Java)": {
-    "prefix": "arrayOfNumbersVariable",
+    "prefix": "varArrayOfNumbers; arrayOfNumbersVariable",
     "body": [
       "int[] ${1:arrayOfNumbersVariable} = new int[]{${2:1}, ${3:2}, ${4:3}, ${5:4}};"
     ],
     "scope": "java"
   },
   "Object Array Variable (Java)": {
-    "prefix": "arrayOfObjectsVariable",
+    "prefix": "varArrayOfObjects; arrayOfObjectsVariable",
     "body": [
       "HashMap<String, Object>[] ${1:arrayOfObjectsVariable} = new HashMap[]{",
       "  new HashMap<String, Object>() {{ put(\"key1\", 1); put(\"key2\", \"Value 1\"); }},",
@@ -966,27 +975,27 @@
   //====================BASH====================//
   //====================RUBY====================//
   "String Variable (Ruby)": {
-    "prefix": "stringVariable",
+    "prefix": "varText; stringVariable",
     "body": ["${1:stringVariable} = \"${2:Hello, World!}\""],
     "scope": "ruby"
   },
   "Integer Number Variable (Ruby)": {
-    "prefix": "numberIntegerVariable",
+    "prefix": "varNumber; numberIntegerVariable",
     "body": ["${1:numberIntegerVariable} = ${2:100}"],
     "scope": "ruby"
   },
   "Float Number Variable (Ruby)": {
-    "prefix": "numberFloatVariable",
+    "prefix": "varDecimal; numberFloatVariable",
     "body": ["${1:numberFloatVariable} = ${2:3.14}"],
     "scope": "ruby"
   },
   "Boolean Variable (Ruby)": {
-    "prefix": "booleanVariable",
+    "prefix": "varBoolean; booleanVariable",
     "body": ["${1:booleanVariable} = ${2:true}"],
     "scope": "ruby"
   },
   "Object Variable (Ruby)": {
-    "prefix": "objectVariable",
+    "prefix": "varObject; objectVariable",
     "body": [
       "${1:objectVariable} = {",
       "  ${2:key1}: ${3:1},",
@@ -996,7 +1005,7 @@
     "scope": "ruby"
   },
   "Object Literal Variable (Ruby)": {
-    "prefix": "objectLiteralVariable; constant; objectConstant",
+    "prefix": "varEnum; objectLiteralVariable; constant; objectConstant",
     "body": [
       "${1:objectLiteralVariable} = {",
       "  ${2:KEY_1}: '${3:Value 1}',",
@@ -1006,17 +1015,17 @@
     "scope": "ruby"
   },
   "String Array Variable (Ruby)": {
-    "prefix": "arrayOfStringsVariable",
+    "prefix": "varArrayOfText; arrayOfStringsVariable",
     "body": ["${1:arrayOfStringsVariable} = ['${2:Hello}', '${3:World}!']"],
     "scope": "ruby"
   },
   "Number Array Variable (Ruby)": {
-    "prefix": "arrayOfNumbersVariable",
+    "prefix": "varArrayOfNumbers; arrayOfNumbersVariable",
     "body": ["${1:arrayOfNumbersVariable} = [${2:1}, ${3:2}, ${4:3}, ${5:4}]"],
     "scope": "ruby"
   },
   "Object Array Variable (Ruby)": {
-    "prefix": "arrayOfObjectsVariable",
+    "prefix": "varArrayOfObjects; arrayOfObjectsVariable",
     "body": [
       "${1:arrayOfObjectsVariable} = [",
       "  {",
@@ -1444,27 +1453,27 @@
   //====================RUBY====================//
   //====================TYPESCRIPT/JAVASCRIPT====================//
   "String Variable (TypeScript/JavaScript)": {
-    "prefix": "stringVariable",
+    "prefix": "varText; stringVariable",
     "body": ["const ${1:stringVariable}: string = \"${2:Hello, World!}\";"],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Integer Number Variable (TypeScript/JavaScript)": {
-    "prefix": "numberIntegerVariable",
+    "prefix": "varNumber; numberIntegerVariable",
     "body": ["const ${1:numberIntegerVariable}: number = ${2:100};"],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Float Number Variable (TypeScript/JavaScript)": {
-    "prefix": "numberFloatVariable",
+    "prefix": "varDecimal; numberFloatVariable",
     "body": ["const ${1:numberFloatVariable}: number = ${2:3.14};"],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Boolean Variable (TypeScript/JavaScript)": {
-    "prefix": "booleanVariable",
+    "prefix": "varBoolean; booleanVariable",
     "body": ["const ${1:booleanVariable}: boolean = ${2:true};"],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Object Variable (TypeScript/JavaScript)": {
-    "prefix": "objectVariable",
+    "prefix": "varObject; objectVariable",
     "body": [
       "const ${1:objectVariable} = {",
       "  key1: 1,",
@@ -1474,7 +1483,7 @@
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Object Literal Variable (TypeScript/JavaScript)": {
-    "prefix": "objectLiteralVariable; constant; objectConstant",
+    "prefix": "varEnum; objectLiteralVariable; constant; objectConstant",
     "body": [
       "const ${1:objectLiteralVariable} = {",
       "  ${2:KEY_1}: \"${3:Value 1}\",",
@@ -1484,21 +1493,21 @@
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "String Array Variable (TypeScript/JavaScript)": {
-    "prefix": "arrayOfStringsVariable",
+    "prefix": "varArrayOfText; arrayOfStringsVariable",
     "body": [
       "const ${1:arrayOfStringsVariable}: string[] = [\"${2:Hello}\", \"${3:World}!\"];"
     ],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Number Array Variable (TypeScript/JavaScript)": {
-    "prefix": "arrayOfNumbersVariable",
+    "prefix": "varArrayOfNumbers; arrayOfNumbersVariable",
     "body": [
       "const ${1:arrayOfNumbersVariable}: number[] = [${2:1}, ${3:2}, ${4:3}, ${5:4}];"
     ],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Object Array Variable (TypeScript/JavaScript)": {
-    "prefix": "arrayOfObjectsVariable",
+    "prefix": "varArrayOfObjects; arrayOfObjectsVariable",
     "body": [
       "const ${1:arrayOfObjectsVariable} = [",
       "  {",
