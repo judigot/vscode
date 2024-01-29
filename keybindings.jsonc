@@ -2,6 +2,27 @@
 // If there are similar bindings, place the ones with conditions below the ones without (e.g. Git: Save Changes)
 [
   {
+    "key": "ctrl+shift+v",
+    "command": "quicktype.pasteJSONAsTypesAndSerialization",
+    "when": "editorTextFocus && editorLangId != markdown"
+  },
+  {
+    "key": "ctrl+shift+v",
+    "command": "-quicktype.pasteJSONAsTypesAndSerialization",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+v",
+    "command": "quicktype.pasteJSONAsTypes",
+    "when": "editorTextFocus && editorLangId != markdown"
+  },
+  {
+    "key": "ctrl+shift+alt+v",
+    "command": "-quicktype.pasteJSONAsTypes",
+    "when": "editorTextFocus"
+  },
+  /*==========RESOLVE MARKDOWN PREVIEW & PAST JSON AS CODE CONFLICT==========*/
+  {
     "key": "shift+alt+f",
     "command": "extension.multiCommand.execute",
     "args": {
@@ -13,7 +34,7 @@
         "editor.action.formatDocument"
       ]
     },
-    "when": "editorTextFocus && !editorReadonly"
+    "when": "editorTextFocus && !editorReadonly && (editorLangId == typescript || editorLangId == typescriptreact || editorLangId == javascript || editorLangId == javascriptreact)"
   },
   {
     "key": "ctrl+shift+alt+backspace",
