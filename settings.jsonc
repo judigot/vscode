@@ -229,5 +229,6 @@ XML Tools
   "editor.guides.bracketPairs": "active",
   //=====BRACKET PAIR COLORIZATION=====//
   "settingsSync.ignoredSettings": ["-git.path"],
-  "tabnine.experimentalAutoImports": true
+  "tabnine.experimentalAutoImports": true,
+  "security.allowedUNCHosts": ["wsl.localhost"]
 }
