@@ -1,6 +1,7 @@
 // Place your key bindings in this file to overwrite the defaults
 // If there are similar bindings, place the ones with conditions below the ones without (e.g. Git: Save Changes)
 [
+  /*==========RESOLVE MARKDOWN PREVIEW & PAST JSON AS CODE CONFLICT==========*/
   {
     "key": "ctrl+shift+v",
     "command": "quicktype.pasteJSONAsTypesAndSerialization",
@@ -223,7 +224,7 @@
     "key": "ctrl+shift+alt+c",
     "command": "type",
     "args": {
-      "text": "git clone https://github.com/judigot/repository .\ngit status\n"
+      "text": "git clone git@github.com:judigot/repository.git .\ngit status\n"
     },
     "when": "editorTextFocus && !editorReadonly"
   },
