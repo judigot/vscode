@@ -230,5 +230,7 @@ XML Tools
   //=====BRACKET PAIR COLORIZATION=====//
   "settingsSync.ignoredSettings": ["-git.path"],
   "tabnine.experimentalAutoImports": true,
-  "security.allowedUNCHosts": ["wsl.localhost"]
+  "eslint.options": {
+    "rules": {}
+  }
 }
