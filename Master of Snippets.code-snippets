@@ -2053,14 +2053,14 @@
     "prefix": "functionArrow",
     "body": [
       "const ${1:arrowFunctionName} = (",
-      "  param1: number,",
+      "  ${2:param1: number,",
       "  {",
       "    key1,",
       "    key2,",
-      "  }: {",
+      "  \\}: {",
       "    key1: number;",
       "    key2: string;",
-      "  }",
+      "  \\}}",
       "): boolean => {",
       "  return true;",
       "};"
