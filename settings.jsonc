@@ -166,7 +166,7 @@ XML Tools
     // "python": "clear && PYTHON_VERSION=$(echo $(python --version || python2 --version || python3 --version) | awk '{split($2, a, \".\"); print a[1]}'); clear; \"python$(echo $PYTHON_VERSION)\"",
     "python": "clear && python3",
     "ruby": "clear && ruby",
-    "typescript": "clear && deno run --check=all", // Add "start" before ts-node to run the file in external terminal
+    "typescript": "clear && deno run --check=all --allow-net", // Add "start" before ts-node to run the file in external terminal
     "yaml": "clear && docker compose --file $fileName up"
   },
   // Associate file extensions to a certain language
@@ -230,7 +230,8 @@ XML Tools
   //=====BRACKET PAIR COLORIZATION=====//
   "settingsSync.ignoredSettings": ["-git.path"],
   "tabnine.experimentalAutoImports": true,
-  "eslint.options": {
-    "rules": {}
-  }
+  "security.allowedUNCHosts": ["wsl.localhost"]
+  // "eslint.options": {
+  //   "rules": {}
+  // }
 }
