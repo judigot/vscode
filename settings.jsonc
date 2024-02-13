@@ -83,13 +83,13 @@ XML Tools
   "sync.autoUpload": true,
   // "sync.forceUpload": true,
   "sync.quietSync": true,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.profiles.windows": {
-    "C:/apportable/Programming/PortableGit/bin/bash.exe": {
+    "Git Bash": {
       "path": ["C:/apportable/Programming/PortableGit/bin/bash.exe"],
       "icon": "terminal-bash"
     }
   },
-  "terminal.integrated.defaultProfile.windows": "C:/apportable/Programming/PortableGit/bin/bash.exe",
   "terminal.integrated.env.windows": {
     /* ADD THESE .BASHRC SETTINGS TO THESE FOLLOWING DIRECTORIES */ /*
         C:/Users/Jude/.bashrc
@@ -150,7 +150,7 @@ XML Tools
   // Prevent autocomplete when pressing "."
   "editor.acceptSuggestionOnCommitCharacter": false,
   "liveServer.settings.donotShowInfoMsg": true,
-  "cSpell.userWords": ["chunkhash", "jsxdev", "nodir", "purgecss"],
+  "cSpell.userWords": ["chunkhash", "jsxdev", "nodir", "purgecss", "tanstack"],
   "files.restoreUndoStack": false,
   "files.exclude": {
     "**/node_modules/**": true,
@@ -229,8 +229,7 @@ XML Tools
   "editor.guides.bracketPairs": "active",
   //=====BRACKET PAIR COLORIZATION=====//
   "settingsSync.ignoredSettings": ["-git.path"],
-  "tabnine.experimentalAutoImports": true,
-  "security.allowedUNCHosts": ["wsl.localhost"]
+  "tabnine.experimentalAutoImports": true
   // "eslint.options": {
   //   "rules": {}
   // }
