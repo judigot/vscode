@@ -150,7 +150,7 @@ XML Tools
   // Prevent autocomplete when pressing "."
   "editor.acceptSuggestionOnCommitCharacter": false,
   "liveServer.settings.donotShowInfoMsg": true,
-  "cSpell.userWords": ["chunkhash", "jsxdev", "nodir", "purgecss"],
+  "cSpell.userWords": ["chunkhash", "jsxdev", "nodir", "purgecss", "tanstack"],
   "files.restoreUndoStack": false,
   "files.exclude": {
     "**/node_modules/**": true,
@@ -230,8 +230,7 @@ XML Tools
   //=====BRACKET PAIR COLORIZATION=====//
   "settingsSync.ignoredSettings": ["-git.path"],
   "tabnine.experimentalAutoImports": true,
-  "security.allowedUNCHosts": ["wsl.localhost"],
-  "aws.samcli.lambdaTimeout": 91234
+  "security.allowedUNCHosts": ["wsl.localhost"]
   // "eslint.options": {
   //   "rules": {}
   // }
