@@ -230,7 +230,8 @@ XML Tools
   //=====BRACKET PAIR COLORIZATION=====//
   "settingsSync.ignoredSettings": ["-git.path"],
   "tabnine.experimentalAutoImports": true,
-  "security.allowedUNCHosts": ["wsl.localhost"]
+  "security.allowedUNCHosts": ["wsl.localhost"],
+  "aws.samcli.lambdaTimeout": 91234
   // "eslint.options": {
   //   "rules": {}
   // }
