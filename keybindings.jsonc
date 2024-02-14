@@ -235,7 +235,7 @@
     "key": "ctrl+shift+alt+s",
     "command": "workbench.action.terminal.sendSequence",
     "args": {
-      "text": "git add .\ngit commit -m \"Commit\"\ngit push origin\ngit status\n"
+      "text": "git add .\ngit commit -m \"Update\"\ngit push origin\ngit status\n"
     }
   },
   {
@@ -243,7 +243,7 @@
     "key": "ctrl+shift+alt+s",
     "command": "type",
     "args": {
-      "text": "git add .\ngit commit -m \"Commit\"\ngit push origin\ngit status\n"
+      "text": "git add .\ngit commit -m \"Update\"\ngit push origin\ngit status\n"
     },
     "when": "editorTextFocus && !editorReadonly"
   },
