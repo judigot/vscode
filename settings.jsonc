@@ -73,7 +73,6 @@ XML Tools
   /*====================EXTENSIONS====================*/
   // Run updates only on VS Code startup
   "update.mode": "default",
-  "git.path": "C:/apportable/Programming/PortableGit/bin/git.exe",
   "local-history.path": "C:/apportable/App Data/VS Code",
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
