@@ -72,6 +72,26 @@ WSL
 XML Tools
   /*====================EXTENSIONS====================*/
   "git.path": "C:/apportable/Programming/PortableGit/bin/git.exe",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.profiles.windows": {
+    "Git Bash": {
+      "path": ["C:/apportable/Programming/PortableGit/bin/bash.exe"],
+      "icon": "terminal-bash"
+    }
+  },
+  "terminal.integrated.env.windows": {
+    /* ADD THESE .BASHRC SETTINGS TO THESE FOLLOWING DIRECTORIES */ /*
+        C:/Users/Jude/.bashrc
+        //wsl.localhost/Ubuntu/home/judigot
+    /*
+    /*==========.BASHRC==========*/ /*
+    #!/bin/bash
+    export PATH="$PATH:/c/apportable/Programming/deno:/c/apportable/Programming/jdk/bin:/c/apportable/Programming/PortableGit/cmd:/c/apportable/Programming/Terraform:/c/apportable/Programming/nvm:/c/apportable/Programming/nodejs:/c/apportable/Programming/nodejs/node_modules/npm/bin:/c/apportable/Programming/sqlite:/c/Program Files/Docker/Docker/resources/bin:/c/ProgramData/DockerDesktop/version-bin:/c/Users/Admin/AppData/Local/ComposerSetup/bin:/c/Users/Admin/AppData/Roaming/Composer/vendor/bin"
+    /*==========.BASHRC==========*/
+    "PATH": "${env:PATH};C:/apportable/Programming/deno;C:/apportable/Programming/jdk/bin;C:/apportable/Programming/PortableGit/cmd;C:/apportable/Programming/Terraform;C:/apportable/Programming/nvm;C:/apportable/Programming/nodejs;C:/apportable/Programming/nodejs/node_modules/npm/bin;C:/apportable/Programming/sqlite;C:/Program Files/Docker/Docker/resources/bin;C:/ProgramData/DockerDesktop/version-bin;C:/Users/Admin/AppData/Local/ComposerSetup/bin;C:/Users/Admin/AppData/Roaming/Composer/vendor/bin",
+    "NVM_HOME": "C:/apportable/Programming/nvm",
+    "NVM_SYMLINK": "C:/apportable/Programming/nodejs"
+  },
   // Run updates only on VS Code startup
   "update.mode": "default",
   "local-history.path": "C:/apportable/App Data/VS Code",
@@ -83,13 +103,6 @@ XML Tools
   "sync.autoUpload": true,
   // "sync.forceUpload": true,
   "sync.quietSync": true,
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "terminal.integrated.profiles.windows": {
-    "Git Bash": {
-      "path": ["C:/apportable/Programming/PortableGit/bin/bash.exe"],
-      "icon": "terminal-bash"
-    }
-  },
   /*NVM Settings (C:/judigot/Programming/Environment/nvm/settings.txt)
 
   settings.txt:
