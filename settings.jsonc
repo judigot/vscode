@@ -71,6 +71,7 @@ vscode-styled-components
 WSL
 XML Tools
   /*====================EXTENSIONS====================*/
+  "git.path": "C:/apportable/Programming/PortableGit/bin/git.exe",
   // Run updates only on VS Code startup
   "update.mode": "default",
   "local-history.path": "C:/apportable/App Data/VS Code",
