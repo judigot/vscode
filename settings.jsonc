@@ -167,11 +167,12 @@ XML Tools
     "python": "clear && python3",
     "ruby": "clear && ruby",
     "typescript": "clear && deno run --check=all --allow-net", // Add "start" before ts-node to run the file in external terminal
-    "yaml": "clear && docker compose --file $fileName up"
+    "yaml": "[[ $fileName == \"compose.yml\" || $fileName == \"docker-compose.yml\" ]] && clear && docker compose --file $fileName up"
   },
   // Associate file extensions to a certain language
   "files.associations": {
     "*.code-snippets": "json",
+    "compose*.yml": "yaml",
     "docker-compose*.yml": "yaml"
     // "*.tpl": "html", // Smarty template engine
   },
