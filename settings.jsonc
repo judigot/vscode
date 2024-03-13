@@ -230,7 +230,7 @@ XML Tools
   //=====BRACKET PAIR COLORIZATION=====//
   "settingsSync.ignoredSettings": ["-git.path"],
   "tabnine.experimentalAutoImports": true,
-  "shellcheck.customArgs": ["-e SC1017"] // Remove "Literal carriage return. Run script through tr -d '\r'" warning
+  "shellcheck.customArgs": ["-e", "SC1017"] // Remove "Literal carriage return. Run script through tr -d '\r'" warning
   // "eslint.options": {
   //   "rules": {}
   // }
