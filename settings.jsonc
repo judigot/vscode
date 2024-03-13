@@ -88,7 +88,7 @@ XML Tools
     #!/bin/bash
     export PATH="$PATH:/c/apportable/Programming/deno:/c/apportable/Programming/jdk/bin:/c/apportable/Programming/PortableGit/cmd:/c/apportable/Programming/Terraform:/c/apportable/Programming/nvm:/c/apportable/Programming/nodejs:/c/apportable/Programming/nodejs/node_modules/npm/bin:/c/apportable/Programming/sqlite:/c/Program Files/Docker/Docker/resources/bin:/c/ProgramData/DockerDesktop/version-bin:/c/Users/Admin/AppData/Local/ComposerSetup/bin:/c/Users/Admin/AppData/Roaming/Composer/vendor/bin"
     /*==========.BASHRC==========*/
-    "PATH": "${env:PATH};C:/apportable/Programming/deno;C:/apportable/Programming/jdk/bin;C:/apportable/Programming/PortableGit/cmd;C:/apportable/Programming/Terraform;C:/apportable/Programming/nvm;C:/apportable/Programming/nodejs;C:/apportable/Programming/nodejs/node_modules/npm/bin;C:/apportable/Programming/sqlite;C:/Program Files/Docker/Docker/resources/bin;C:/ProgramData/DockerDesktop/version-bin;C:/Users/Admin/AppData/Local/ComposerSetup/bin;C:/Users/Admin/AppData/Roaming/Composer/vendor/bin",
+    "PATH": "${env:PATH};C:/apportable/Programming/PortableGit/cmd;C:/apportable/Programming/deno;C:/apportable/Programming/nvm;C:/apportable/Programming/nodejs;C:/apportable/Programming/nodejs/node_modules/npm/bin;C:/apportable/Programming/jdk/bin;C:/apportable/Programming/sqlite;C:/apportable/Programming/terraform;C:/apportable/Programming/pulumi/bin;C:/ProgramFiles/Docker/Docker/resources/bin;C:/ProgramData/DockerDesktop/version-bin;",
     "NVM_HOME": "C:/apportable/Programming/nvm",
     "NVM_SYMLINK": "C:/apportable/Programming/nodejs"
   },
@@ -167,14 +167,13 @@ XML Tools
     "python": "clear && python3",
     "ruby": "clear && ruby",
     "typescript": "clear && deno run --check=all --allow-net", // Add "start" before ts-node to run the file in external terminal
-    "yaml": "[[ $fileName == \"compose.yml\" || $fileName == \"docker-compose.yml\" ]] && clear && docker compose --file $fileName up"
+    "yaml": "clear; [[ $fileName == \"docker-compose.yml\" ]] && docker compose up || { [[ $fileName == \"compose.yml\" || $fileName == \"docker-compose.\"*\".yml\" ]] && docker compose --file \"$fileName\" up; }"
   },
   // Associate file extensions to a certain language
   "files.associations": {
     "*.code-snippets": "json",
     "compose*.yml": "yaml",
     "docker-compose*.yml": "yaml"
-    // "*.tpl": "html", // Smarty template engine
   },
   "explorer.autoReveal": false, // Prevents VS Code from scrolling to the opened file when closing a another file
   "html.format.templating": true,
@@ -230,7 +229,8 @@ XML Tools
   "editor.guides.bracketPairs": "active",
   //=====BRACKET PAIR COLORIZATION=====//
   "settingsSync.ignoredSettings": ["-git.path"],
-  "tabnine.experimentalAutoImports": true
+  "tabnine.experimentalAutoImports": true,
+  "shellcheck.customArgs": ["-e SC1017"] // Remove "Literal carriage return. Run script through tr -d '\r'" warning
   // "eslint.options": {
   //   "rules": {}
   // }
