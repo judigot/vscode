@@ -46,10 +46,7 @@
   },
   {
     "key": "alt+x",
-    "command": "extension.multiCommand.execute",
-    "args": {
-      "sequence": ["editor.action.commentLine"]
-    },
+    "command": "editor.action.commentLine",
     "when": "editorTextFocus && !editorReadonly"
   },
   {
@@ -129,14 +126,14 @@
     "key": "f9",
     "command": "workbench.action.terminal.sendSequence",
     "args": {
-      "text": "clear && NODE_ENV=production node dist/index.js\n"
+      "text": "clear && pnpm start\n"
     }
   },
   {
     "key": "f10",
     "command": "workbench.action.terminal.sendSequence",
     "args": {
-      "text": "clear && NODE_ENV=development npx nodemon --exec ts-node -r tsconfig-paths/register src/index.ts\n"
+      "text": "clear && pnpm run dev\n"
     }
   },
   {
@@ -162,7 +159,7 @@
         {
           "command": "workbench.action.terminal.sendSequence",
           "args": {
-            "text": "clear && NODE_ENV=production node dist/index.js\n"
+            "text": "clear && pnpm start\n"
           }
         }
       ]
@@ -178,7 +175,7 @@
         {
           "command": "workbench.action.terminal.sendSequence",
           "args": {
-            "text": "clear && NODE_ENV=development npx nodemon --exec ts-node -r tsconfig-paths/register src/index.ts\n"
+            "text": "clear && pnpm run dev\n"
           }
         }
       ]
