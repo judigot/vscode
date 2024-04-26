@@ -166,8 +166,8 @@ XML Tools
     // "python": "clear && PYTHON_VERSION=$(echo $(python --version || python2 --version || python3 --version) | awk '{split($2, a, \".\"); print a[1]}'); clear; \"python$(echo $PYTHON_VERSION)\"",
     "python": "clear && python3",
     "ruby": "clear && ruby",
-    // "typescript": "clear && deno run --check=all --allow-net", // Add "start" before ts-node to run the file in external terminal
     "typescript": "clear && command -v ts-node &> /dev/null && ts-node --compilerOptions \"{\\\"module\\\":\\\"CommonJS\\\"}\" $fullFileName || deno run --check=all --allow-net", // Add "start" before ts-node to run the file in external terminal
+    "typescriptreact": "clear && deno run --check=all --allow-net", // Add "start" before ts-node to run the file in external terminal
     "yaml": "clear; [[ $fileName == \"docker-compose.yml\" ]] && docker compose up || { [[ $fileName == \"compose.yml\" || $fileName == \"docker-compose.\"*\".yml\" ]] && docker compose --file \"$fileName\" up; }"
   },
   // Associate file extensions to a certain language
@@ -231,6 +231,7 @@ XML Tools
   //=====BRACKET PAIR COLORIZATION=====//
   "settingsSync.ignoredSettings": ["-git.path"],
   "tabnine.experimentalAutoImports": true,
+  "workbench.editor.tabSizing": "fixed",
   "files.eol": "\n", // Use LF rather than CRLF
   "eslint.options": {
     "rules": {}
