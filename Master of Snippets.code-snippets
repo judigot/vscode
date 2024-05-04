@@ -906,6 +906,11 @@
     "body": ["#!/bin/bash", "", ""],
     "scope": "shellscript"
   },
+  "Pause (Bash)": {
+    "prefix": "pause",
+    "body": ["read -n 1 -s -r -p \"Press any key to continue...\""],
+    "scope": "shellscript"
+  },
   "If-Else Statement (Bash)": {
     "prefix": "ifElse",
     "body": [
