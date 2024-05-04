@@ -166,8 +166,9 @@ XML Tools
     // "python": "clear && PYTHON_VERSION=$(echo $(python --version || python2 --version || python3 --version) | awk '{split($2, a, \".\"); print a[1]}'); clear; \"python$(echo $PYTHON_VERSION)\"",
     "python": "clear && python3",
     "ruby": "clear && ruby",
-    "typescript": "clear && command -v ts-node &> /dev/null && ts-node --compilerOptions \"{\\\"module\\\":\\\"CommonJS\\\"}\" $fullFileName || deno run --check=all --allow-net $fullFileName", // Add "start" before ts-node to run the file in external terminal
-    "typescriptreact": "clear && deno run --check=all --allow-net", // Add "start" before ts-node to run the file in external terminal
+    // Add "start" before ts-node to run the file in external terminal
+    "typescript": "clear && if echo $fullFileName | awk '/tempCodeRunnerFile/ {exit 0} {exit 1}' || ! command -v pnpm ts-node &> /dev/null; then deno run --check=all --allow-net $fullFileName; else pnpm ts-node --compilerOptions \"{\\\"module\\\":\\\"CommonJS\\\"}\" $fullFileName; fi",
+    "typescriptreact": "clear && if echo $fullFileName | awk '/tempCodeRunnerFile/ {exit 0} {exit 1}' || ! command -v pnpm ts-node &> /dev/null; then deno run --check=all --allow-net $fullFileName; else pnpm ts-node --compilerOptions \"{\\\"module\\\":\\\"CommonJS\\\"}\" $fullFileName; fi",
     "yaml": "clear; [[ $fileName == \"docker-compose.yml\" ]] && docker compose up || { [[ $fileName == \"compose.yml\" || $fileName == \"docker-compose.\"*\".yml\" ]] && docker compose --file \"$fileName\" up; }"
   },
   // Associate file extensions to a certain language
