@@ -167,8 +167,8 @@ XML Tools
     "python": "clear && python3",
     "ruby": "clear && ruby",
     // Add "start" before ts-node to run the file in external terminal
-    "typescript": "clear && if echo $fullFileName | awk '/tempCodeRunnerFile/ {exit 0} {exit 1}' || ! command -v pnpm ts-node &> /dev/null; then deno run --check=all --allow-net $fullFileName; else pnpm ts-node --compilerOptions \"{\\\"module\\\":\\\"CommonJS\\\"}\" $fullFileName; fi",
-    "typescriptreact": "clear && if echo $fullFileName | awk '/tempCodeRunnerFile/ {exit 0} {exit 1}' || ! command -v pnpm ts-node &> /dev/null; then deno run --check=all --allow-net $fullFileName; else pnpm ts-node --compilerOptions \"{\\\"module\\\":\\\"CommonJS\\\"}\" $fullFileName; fi",
+    "typescript": "clear && if echo $fullFileName | awk '/tempCodeRunnerFile/ {exit 0} {exit 1}' || ! command -v node &> /dev/null; then deno run --check=all --allow-net $fullFileName; else node -r esbuild-register $fullFileName; fi",
+    "typescriptreact": "clear && if echo $fullFileName | awk '/tempCodeRunnerFile/ {exit 0} {exit 1}' || ! command -v node &> /dev/null; then deno run --check=all --allow-net $fullFileName; else node -r esbuild-register $fullFileName; fi",
     "yaml": "clear; [[ $fileName == \"docker-compose.yml\" ]] && docker compose up || { [[ $fileName == \"compose.yml\" || $fileName == \"docker-compose.\"*\".yml\" ]] && docker compose --file \"$fileName\" up; }"
   },
   // Associate file extensions to a certain language
