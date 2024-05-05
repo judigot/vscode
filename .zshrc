@@ -73,7 +73,6 @@ ZSH_THEME="robbyrussell"
 plugins=(git zsh-autosuggestions)
 
 source .snippetsrc
-source .aliasesrc
 
 source $ZSH/oh-my-zsh.sh
 
