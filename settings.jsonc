@@ -71,12 +71,57 @@ vscode-styled-components
 WSL
 XML Tools
   /*====================EXTENSIONS====================*/
-  "git.path": "C:/apportable/Programming/PortableGit/bin/git.exe",
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  // "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.defaultProfile.windows": "MSYS2",
   "terminal.integrated.profiles.windows": {
     "Git Bash": {
       "path": ["C:/apportable/Programming/PortableGit/bin/bash.exe"],
-      "icon": "terminal-bash"
+      "env": {
+        "HOME": "C:/Users/Jude", // Uses the .bashrc located at C:/Users/Jude
+        "MSYSTEM": "MSYS",
+        "CHERE_INVOKING": "1" // Start the terminal in the directory from which it was launched
+      },
+      "color": "terminal.ansiRed",
+      "icon": "terminal-bash",
+      "overrideName": true
+    },
+    "ZSH": {
+      "path": "C:/apportable/Programming/msys64/usr/bin/bash.exe",
+      "args": ["--login", "-i", "-c", "exec zsh"],
+      "env": {
+        "HOME": "C:/Users/Jude", // Uses the .bashrc located at C:/Users/Jude
+        "MSYSTEM": "MSYS",
+        "CHERE_INVOKING": "1", // Start the terminal in the directory from which it was launched
+        "WELCOME_MESSAGE": "Running inside Windows environment." // The terminal will echo this message in .bashrc
+      },
+      "color": "terminal.ansiCyan",
+      "icon": "terminal-bash",
+      "overrideName": true
+    },
+    "MSYS2": {
+      "path": "C:/apportable/Programming/msys64/usr/bin/bash.exe",
+      "args": ["--login", "-i"],
+      "env": {
+        "HOME": "C:/Users/Jude", // Uses the .bashrc located at C:/Users/Jude
+        "MSYSTEM": "MSYS",
+        "CHERE_INVOKING": "1", // Start the terminal in the directory from which it was launched
+        "WELCOME_MESSAGE": "Running inside Windows environment." // The terminal will echo this message in .bashrc
+      },
+      "color": "terminal.ansiMagenta",
+      "icon": "terminal-bash",
+      "overrideName": true
+    },
+    "MSYS2 (MSYS2 Environment)": {
+      "path": "C:/apportable/Programming/msys64/usr/bin/bash.exe",
+      "args": ["--login", "-i"],
+      "env": {
+        "HOME": "C:/apportable/Programming/msys64/home/Jude",
+        "MSYSTEM": "MSYS",
+        "CHERE_INVOKING": "1"
+      },
+      "color": "terminal.ansiYellow",
+      "icon": "terminal-bash",
+      "overrideName": true
     }
   },
   "terminal.integrated.env.windows": {
@@ -92,6 +137,7 @@ XML Tools
     "NVM_HOME": "C:/apportable/Programming/nvm",
     "NVM_SYMLINK": "C:/apportable/Programming/nodejs"
   },
+  "git.path": "C:/apportable/Programming/PortableGit/bin/git.exe",
   // Run updates only on VS Code startup
   "update.mode": "default",
   "local-history.path": "C:/apportable/App Data/VS Code",
