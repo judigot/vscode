@@ -91,8 +91,7 @@ XML Tools
       "env": {
         "HOME": "C:/Users/Jude", // Uses the .bashrc located at C:/Users/Jude
         "MSYSTEM": "MSYS",
-        "CHERE_INVOKING": "1", // Start the terminal in the directory from which it was launched
-        "WELCOME_MESSAGE": "Running inside Windows environment." // The terminal will echo this message in .bashrc
+        "CHERE_INVOKING": "1" // Start the terminal in the directory from which it was launched
       },
       "color": "terminal.ansiCyan",
       "icon": "terminal-bash",
@@ -104,8 +103,7 @@ XML Tools
       "env": {
         "HOME": "C:/Users/Jude", // Uses the .bashrc located at C:/Users/Jude
         "MSYSTEM": "MSYS",
-        "CHERE_INVOKING": "1", // Start the terminal in the directory from which it was launched
-        "WELCOME_MESSAGE": "Running inside Windows environment." // The terminal will echo this message in .bashrc
+        "CHERE_INVOKING": "1" // Start the terminal in the directory from which it was launched
       },
       "color": "terminal.ansiMagenta",
       "icon": "terminal-bash",
