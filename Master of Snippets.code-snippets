@@ -274,22 +274,22 @@
     "body": ["${1:objectVariable1} == ${2:objectVariable2}"],
     "scope": "python"
   },
-  "Print to console (Python)": {
+  "Print to Console (Python)": {
     "prefix": "log",
     "body": ["print(${1:\"${2:Hello, World!}\"})"],
     "scope": "python"
   },
-  "Print red to console (Python)": {
+  "Print Red to Console (Python)": {
     "prefix": "logRed",
     "body": ["print(f\"\\033[91m${1:${2:Hello, World!}}\\033[0m\")"],
     "scope": "python"
   },
-  "Print yellow to console (Python)": {
+  "Print Yellow to Console (Python)": {
     "prefix": "logYellow",
     "body": ["print(f\"\\033[93m${1:${2:Hello, World!}}\\033[0m\")"],
     "scope": "python"
   },
-  "Print green to console (Python)": {
+  "Print Green to Console (Python)": {
     "prefix": "logGreen",
     "body": ["print(f\"\\033[92m${1:${2:Hello, World!}}\\033[0m\")"],
     "scope": "python"
@@ -693,26 +693,26 @@
     "body": ["${1:objectVariable1}.equals(${2:objectVariable2})"],
     "scope": "java"
   },
-  "Print to console (Java)": {
+  "Print to Console (Java)": {
     "prefix": "log",
     "body": ["System.out.println(${1:\"${2:Hello, World!}\"});"],
     "scope": "java"
   },
-  "Print red to console (Java)": {
+  "Print Red to Console (Java)": {
     "prefix": "logRed",
     "body": [
       "System.out.println((char)27 + \"[31m\" + ${1:\"${2:Hello, World!}\"} + (char)27 + \"[0m\");"
     ],
     "scope": "java"
   },
-  "Print yellow to console (Java)": {
+  "Print Yellow to Console (Java)": {
     "prefix": "logYellow",
     "body": [
       "System.out.println((char)27 + \"[33m\" + ${1:\"${2:Hello, World!}\"} + (char)27 + \"[0m\");"
     ],
     "scope": "java"
   },
-  "Print green to console (Java)": {
+  "Print Green to Console (Java)": {
     "prefix": "logGreen",
     "body": [
       "System.out.println((char)27 + \"[32m\" + ${1:\"${2:Hello, World!}\"} + (char)27 + \"[0m\");"
@@ -957,22 +957,22 @@
     ],
     "scope": "shellscript"
   },
-  "Print to console (Bash)": {
+  "Print to Console (Bash)": {
     "prefix": "log",
     "body": ["echo -e \"${1:$TM_SELECTED_TEXT}\""],
     "scope": "shellscript"
   },
-  "Print red to console (Bash)": {
+  "Print Red to Console (Bash)": {
     "prefix": "logRed",
     "body": ["echo -e \"\\e[31m${1:$TM_SELECTED_TEXT}\\e[0m\" # Red"],
     "scope": "shellscript"
   },
-  "Print yellow to console (Bash)": {
+  "Print Yellow to Console (Bash)": {
     "prefix": "logYellow",
     "body": ["echo -e \"\\e[33m${1:$TM_SELECTED_TEXT}\\e[0m\" # Yellow"],
     "scope": "shellscript"
   },
-  "Print green to console (Bash)": {
+  "Print Green to Console (Bash)": {
     "prefix": "logGreen",
     "body": ["echo -e \"\\e[32m${1:$TM_SELECTED_TEXT}\\e[0m\" # Green"],
     "scope": "shellscript"
@@ -1277,17 +1277,17 @@
     "body": ["puts ${1:\"${2:Hello, World!}\"}"],
     "scope": "ruby"
   },
-  "Print red to console (Ruby)": {
+  "Print Red to Console (Ruby)": {
     "prefix": "logRed",
     "body": ["puts \"\\e[31m${1:Hello, World!}\\e[0m\""],
     "scope": "ruby"
   },
-  "Print yellow to console (Ruby)": {
+  "Print Yellow to Console (Ruby)": {
     "prefix": "logYellow",
     "body": ["puts \"\\e[33m${1:Hello, World!}\\e[0m\""],
     "scope": "ruby"
   },
-  "Print green to console (Ruby)": {
+  "Print Green to Console (Ruby)": {
     "prefix": "logGreen",
     "body": ["puts \"\\e[32m${1:Hello, World!}\\e[0m\""],
     "scope": "ruby"
@@ -1777,58 +1777,39 @@
     ],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
-  "Print to console (TypeScript/JavaScript)": {
+  // "Print to Console (TypeScript/JavaScript)": {
+  //   "prefix": "log",
+  //   "body": ["console.log(${1:\"${2:Hello, World!}\"});"],
+  //   "scope": "typescript, javascript, typescriptreact, javascriptreact"
+  // },
+  "Print to Console (TypeScript/JavaScript)": {
     "prefix": "log",
-    "body": ["console.log(${1:\"${2:Hello, World!}\"});"],
+    "body": [
+      "/* prettier-ignore */ ((log = ${1:\"${2:Hello, World!}\"})=>{console.log([\"string\",\"number\"].includes(typeof log)?log:JSON.stringify(log,null,4));})();"
+    ],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
-  "Print red to console (TypeScript/JavaScript)": {
+  "Print Red to Console (TypeScript/JavaScript)": {
     "prefix": "logRed",
-    "body": ["console.log(`%c${${1:\"${2:Hello, World!}\"}}`, \"color: red\")"],
+    "body": [
+      "/* prettier-ignore */ ((log = ${1:\"${2:Hello, World!}\"})=>{console.log(['string','number'].includes(typeof log)?`%c\\${log}`:`%c${JSON.stringify(variable,null,4)}`,\"color: red;\");})();"
+    ],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
-  "Print yellow to console (TypeScript/JavaScript)": {
+  "Print Yellow to Console (TypeScript/JavaScript)": {
     "prefix": "logYellow",
     "body": [
-      "console.log(`%c${${1:\"${2:Hello, World!}\"}}`, \"color: yellow\")"
+      "/* prettier-ignore */ ((log = ${1:\"${2:Hello, World!}\"})=>{console.log(['string','number'].includes(typeof log)?`%c\\${log}`:`%c${JSON.stringify(variable,null,4)}`,\"color: yellow;\");})();"
     ],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
-  "Print green to console (TypeScript/JavaScript)": {
+  "Print Green to Console (TypeScript/JavaScript)": {
     "prefix": "logGreen",
     "body": [
-      "console.log(`%c${${1:\"${2:Hello, World!}\"}}`, \"color: green\");"
+      "/* prettier-ignore */ ((log = ${1:\"${2:Hello, World!}\"})=>{console.log(['string','number'].includes(typeof log)?`%c\\${log}`:`%c${JSON.stringify(variable,null,4)}`,\"color: green;\");})();"
     ],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
-  // "Print to console (TypeScript/JavaScript)": {
-  //   "prefix": "log",
-  //   "body": [
-  //     "/* prettier-ignore */ console.log( typeof ${1:variableName} === \"string\" || typeof ${1:variableName} === \"number\" ? ${1:variableName} : JSON.stringify(${1:variableName}, null, 4) );"
-  //   ],
-  //   "scope": "typescript, javascript, typescriptreact, javascriptreact"
-  // },
-  // "Print Red to Console (TypeScript/JavaScript)": {
-  //   "prefix": "logRed",
-  //   "body": [
-  //     "/* prettier-ignore */ console.log(`%c${typeof ${1:variableName} === \"string\" || typeof ${1:variableName} === \"number\" ? ${1:variableName} : JSON.stringify(${1:variableName}, null, 4)}`, \"color: red\");"
-  //   ],
-  //   "scope": "typescript, javascript, typescriptreact, javascriptreact"
-  // },
-  // "Print Yellow to Console (TypeScript/JavaScript)": {
-  //   "prefix": "logYellow",
-  //   "body": [
-  //     "/* prettier-ignore */ console.log(`%c${typeof ${1:variableName} === \"string\" || typeof ${1:variableName} === \"number\" ? ${1:variableName} : JSON.stringify(${1:variableName}, null, 4)}`, \"color: yellow\");"
-  //   ],
-  //   "scope": "typescript, javascript, typescriptreact, javascriptreact"
-  // },
-  // "Print Green to Console (TypeScript/JavaScript)": {
-  //   "prefix": "logGreen",
-  //   "body": [
-  //     "/* prettier-ignore */ console.log(`%c${typeof ${1:variableName} === \"string\" || typeof ${1:variableName} === \"number\" ? ${1:variableName} : JSON.stringify(${1:variableName}, null, 4)}`, \"color: green\");"
-  //   ],
-  //   "scope": "typescript, javascript, typescriptreact, javascriptreact"
-  // },
   "Print Array/Object to Console (TypeScript/JavaScript)": {
     "prefix": "logArray; logObject",
     "body": [
