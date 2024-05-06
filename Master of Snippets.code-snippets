@@ -313,7 +313,7 @@
     "scope": "python"
   },
   "Convert Array/Object to String (Python)": {
-    "prefix": "stringer",
+    "prefix": "serialize; serializeData; stringer",
     "body": [
       "import json",
       "json_string = json.dumps(${1:arrayOfObjectsVariable}, indent=4)"
@@ -739,7 +739,7 @@
     "scope": "java"
   },
   "Convert Array/Object to String (Java)": {
-    "prefix": "stringer",
+    "prefix": "serialize; serializeData; stringer",
     "body": ["String jsonString = Arrays.toString(${1:arrayOrObject});"],
     "scope": "java"
   },
@@ -1310,7 +1310,7 @@
     "scope": "ruby"
   },
   "Convert Array/Object to String (Ruby)": {
-    "prefix": "stringer",
+    "prefix": "serialize; serializeData; stringer",
     "body": ["JSON.pretty_generate(${1:arrayOfObjectsVariable})"],
     "scope": "ruby"
   },
@@ -1847,7 +1847,7 @@
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Convert Array/Object to String (TypeScript/JavaScript)": {
-    "prefix": "stringer",
+    "prefix": "serialize; serializeData; stringer",
     "body": ["JSON.stringify(${1:arrayOfObjectsVariable}, null, 4)"],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
