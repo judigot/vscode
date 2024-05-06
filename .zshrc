@@ -75,7 +75,7 @@ plugins=(
     zsh-autosuggestions
 )
 
-[[ -f ".snippetsrc" ]] && source ".snippetsrc"
+[[ -f ".bashrc" ]] && source ".bashrc"
 
 source $ZSH/oh-my-zsh.sh
 
