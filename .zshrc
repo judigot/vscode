@@ -72,7 +72,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions)
 
-source .snippetsrc
+[[ -f ".snippetsrc" ]] && source ".snippetsrc"
 
 source $ZSH/oh-my-zsh.sh
 
