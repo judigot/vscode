@@ -130,9 +130,7 @@ XML Tools
   // Run updates only on VS Code startup
   "update.mode": "default",
   "local-history.path": "C:/apportable/App Data/VS Code",
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+
   "workbench.startupEditor": "newUntitledFile",
   "sync.autoDownload": true,
   "sync.autoUpload": true,
@@ -176,6 +174,9 @@ XML Tools
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[php]": {
