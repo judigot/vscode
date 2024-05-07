@@ -1792,21 +1792,21 @@
   "Print Red to Console (TypeScript/JavaScript)": {
     "prefix": "logRed",
     "body": [
-      "/* prettier-ignore */ ((log = ${1:\"${2:Hello, World!}\"})=>{console.log(['string','number'].includes(typeof log)?`%c\\${log}`:`%c${JSON.stringify(variable,null,4)}`,\"color: red;\");})();"
+      "/* prettier-ignore */ ((log = ${1:\"${2:Hello, World!}\"})=>{console.log(['string','number'].includes(typeof log)?`%c\\${log}`:`%c${JSON.stringify(log,null,4)}`,\"color: red;\");})();"
     ],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Print Yellow to Console (TypeScript/JavaScript)": {
     "prefix": "logYellow",
     "body": [
-      "/* prettier-ignore */ ((log = ${1:\"${2:Hello, World!}\"})=>{console.log(['string','number'].includes(typeof log)?`%c\\${log}`:`%c${JSON.stringify(variable,null,4)}`,\"color: yellow;\");})();"
+      "/* prettier-ignore */ ((log = ${1:\"${2:Hello, World!}\"})=>{console.log(['string','number'].includes(typeof log)?`%c\\${log}`:`%c${JSON.stringify(log,null,4)}`,\"color: yellow;\");})();"
     ],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Print Green to Console (TypeScript/JavaScript)": {
     "prefix": "logGreen",
     "body": [
-      "/* prettier-ignore */ ((log = ${1:\"${2:Hello, World!}\"})=>{console.log(['string','number'].includes(typeof log)?`%c\\${log}`:`%c${JSON.stringify(variable,null,4)}`,\"color: green;\");})();"
+      "/* prettier-ignore */ ((log = ${1:\"${2:Hello, World!}\"})=>{console.log(['string','number'].includes(typeof log)?`%c\\${log}`:`%c${JSON.stringify(log,null,4)}`,\"color: green;\");})();"
     ],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
