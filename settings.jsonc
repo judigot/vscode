@@ -269,8 +269,6 @@ XML Tools
   "settingsSync.ignoredSettings": ["-git.path"],
   "tabnine.experimentalAutoImports": true,
   "workbench.editor.tabSizing": "fixed",
-  "files.eol": "\n", // Use LF rather than CRLF
-  "eslint.options": {
-    "rules": {}
-  }
+  // "eslint.options": { "rules": {} } // This will override the .eslintrc.cjs file in your project so comment this out
+  "files.eol": "\n" // Use LF rather than CRLF
 }
