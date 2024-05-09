@@ -75,7 +75,7 @@ plugins=(
     zsh-autosuggestions
 )
 
-[[ -f ".bashrc" ]] && source ".bashrc"
+[[ -f "$HOME/.bashrc" ]] && source "$HOME/.bashrc"
 
 source $ZSH/oh-my-zsh.sh
 
