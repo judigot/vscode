@@ -1,7 +1,7 @@
 // Place your key bindings in this file to overwrite the defaults
 // If there are similar bindings, place the ones with conditions below the ones without (e.g. Git: Save Changes)
 [
-  /*==========RESOLVE MARKDOWN PREVIEW & PAST JSON AS CODE CONFLICT==========*/
+  /*==========RESOLVE MARKDOWN PREVIEW & PASTE JSON AS CODE CONFLICT==========*/
   {
     "key": "ctrl+shift+v",
     "command": "quicktype.pasteJSONAsTypesAndSerialization",
@@ -22,7 +22,7 @@
     "command": "-quicktype.pasteJSONAsTypes",
     "when": "editorTextFocus"
   },
-  /*==========RESOLVE MARKDOWN PREVIEW & PAST JSON AS CODE CONFLICT==========*/
+  /*==========RESOLVE MARKDOWN PREVIEW & PASTE JSON AS CODE CONFLICT==========*/
   {
     "key": "shift+alt+f",
     "command": "extension.multiCommand.execute",
