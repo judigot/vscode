@@ -60,6 +60,7 @@ Remote Explorer
 Rest Client
 ShellCheck
 shell-format
+Spring Boot Extension Pack
 SQLTools
 SQLTools MySQL/MariaDB/TiDB
 Tabnine
@@ -87,7 +88,7 @@ XML Tools
     },
     "ZSH": {
       "path": "C:/apportable/Programming/msys64/usr/bin/bash.exe",
-      "args": ["--login", "-i", "-c", "exec zsh"],
+      "args": ["--login", "-i", "-c", "zsh"],
       "env": {
         "HOME": "C:/Users/Jude", // Uses the .bashrc located at C:/Users/Jude
         "MSYSTEM": "MSYS",
