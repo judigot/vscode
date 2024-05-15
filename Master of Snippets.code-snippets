@@ -959,22 +959,22 @@
   },
   "Print to Console (Bash)": {
     "prefix": "log",
-    "body": ["echo -e \"${1:$TM_SELECTED_TEXT}\""],
+    "body": ["echo -e ${1:\"${2:Hello, World!}\"}"],
     "scope": "shellscript"
   },
   "Print Red to Console (Bash)": {
     "prefix": "logRed",
-    "body": ["echo -e \"\\e[31m${1:$TM_SELECTED_TEXT}\\e[0m\" # Red"],
+    "body": ["echo -e \"\\e[31m${1:Hello, World!}\\e[0m\" # Red"],
     "scope": "shellscript"
   },
   "Print Yellow to Console (Bash)": {
     "prefix": "logYellow",
-    "body": ["echo -e \"\\e[33m${1:$TM_SELECTED_TEXT}\\e[0m\" # Yellow"],
+    "body": ["echo -e \"\\e[33m${1:Hello, World!}\\e[0m\" # Yellow"],
     "scope": "shellscript"
   },
   "Print Green to Console (Bash)": {
     "prefix": "logGreen",
-    "body": ["echo -e \"\\e[32m${1:$TM_SELECTED_TEXT}\\e[0m\" # Green"],
+    "body": ["echo -e \"\\e[32m${1:Hello, World!}\\e[0m\" # Green"],
     "scope": "shellscript"
   },
   //====================BASH====================//
