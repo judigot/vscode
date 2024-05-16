@@ -901,6 +901,28 @@
 
   //====================JAVA====================//
   //====================BASH====================//
+  "Shebang (Bash)": {
+    "prefix": "boilerplate",
+    "body": [
+      "#!/bin/bash",
+      "",
+      "main() {",
+      "    action1",
+      "    action2",
+      "}",
+      "",
+      "action1() {",
+      "    echo -e \"Action 1\"",
+      "}",
+      "",
+      "action2() {",
+      "    echo -e \"Action 2\"",
+      "}",
+      "",
+      "main"
+    ],
+    "scope": "shellscript"
+  },
   "Object Variable (Bash)": {
     "prefix": "varObject; objectVariable",
     "body": [
@@ -909,11 +931,6 @@
       "    [key2]=\"Value\"",
       ")"
     ],
-    "scope": "shellscript"
-  },
-  "Shebang (Bash)": {
-    "prefix": "boilerplate",
-    "body": ["#!/bin/bash", "", ""],
     "scope": "shellscript"
   },
   "Pause (Bash)": {
