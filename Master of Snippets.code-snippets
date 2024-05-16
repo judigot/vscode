@@ -923,6 +923,13 @@
     ],
     "scope": "shellscript"
   },
+  "Load Remote Script (Bash)": {
+    "prefix": "importRemoteScriptFromGithub; loadImportScriptFromGithub; importScriptFromGithub; loadScriptFromGithub;",
+    "body": [
+      "source <(curl -fsSL \"https://raw.githubusercontent.com/user/repository/main/file.txt\")"
+    ],
+    "scope": "shellscript"
+  },
   "Object Variable (Bash)": {
     "prefix": "varObject; objectVariable",
     "body": [
