@@ -901,6 +901,16 @@
 
   //====================JAVA====================//
   //====================BASH====================//
+  "Object Variable (Bash)": {
+    "prefix": "varObject; objectVariable",
+    "body": [
+      "declare -A objectVariable=(",
+      "    [key1]=1",
+      "    [key2]=\"Value\"",
+      ")"
+    ],
+    "scope": "shellscript"
+  },
   "Shebang (Bash)": {
     "prefix": "boilerplate",
     "body": ["#!/bin/bash", "", ""],
