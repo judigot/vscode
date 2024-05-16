@@ -128,6 +128,7 @@ XML Tools
     // "SAMPLE_ENV": "",
     "PATH": "${env:PATH}:/c/apportable/Programming/PortableGit/cmd:/c/apportable/Programming/deno:/c/apportable/Programming/nvm:/c/apportable/Programming/nodejs:/c/apportable/Programming/nodejs/node_modules/npm/bin:/c/apportable/Programming/jdk/bin:/c/apportable/Programming/sqlite:/c/apportable/Programming/terraform:/c/apportable/Programming/pulumi/bin:/c/Users/Jude/AppData/Local/Programs/Microsoft VS Code/bin:/c/Program Files/Docker/Docker/resources/bin:/c/ProgramData/DockerDesktop/version-bin:"
   },
+  "java.jdt.ls.java.home": "C:/apportable/Programming/jdk",
   "git.path": "C:/apportable/Programming/PortableGit/bin/git.exe",
   // Run updates only on VS Code startup
   "update.mode": "default",
@@ -272,5 +273,6 @@ XML Tools
   "tabnine.experimentalAutoImports": true,
   "workbench.editor.tabSizing": "fixed",
   // "eslint.options": { "rules": {} } // This will override the .eslintrc.cjs file in your project so comment this out
-  "files.eol": "\n" // Use LF rather than CRLF
+  // Use LF rather than CRLF
+  "files.eol": "\n"
 }
