@@ -161,6 +161,9 @@ XML Tools
   // "editor.formatOnSave": true,
   // "editor.formatOnPaste": true,
   // "editor.formatOnType": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
