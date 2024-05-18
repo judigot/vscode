@@ -188,6 +188,21 @@ XML Tools
   "[php]": {
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[nginx]": {
+    "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
+  },
   "editor.linkedEditing": true,
   // Prevent autocomplete when pressing "."
   "editor.acceptSuggestionOnCommitCharacter": false,
@@ -222,30 +237,19 @@ XML Tools
   "explorer.autoReveal": false, // Prevents VS Code from scrolling to the opened file when closing a another file
   "html.format.templating": true,
   "code-runner.ignoreSelection": true,
-  "[dockercompose]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-  },
-  "[dockerfile]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-  },
   "javascript.suggest.completeFunctionCalls": true,
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.preferences.importModuleSpecifier": "non-relative", // use @/ instead of ../ in import suggestions
   "diffEditor.ignoreTrimWhitespace": false,
   "terminal.integrated.enableMultiLinePasteWarning": false,
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  "git.autofetch": true,
+  "git.autofetchPeriod": 300,
+  "git.postCommitCommand": "sync",
   "git.confirmSync": false,
-  // "git.autofetch": true,
-  // "git.autofetchPeriod": 0,
+  "git.openRepositoryInParentFolders": "never",
   "npm.enableRunFromFolder": true,
   // Add semicolon or not
   "prettier.semi": true,
-  "git.openRepositoryInParentFolders": "never",
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   // User snippets suggestions at the top
   "editor.snippetSuggestions": "top",
   "explorer.compactFolders": false,
@@ -253,9 +257,6 @@ XML Tools
     "editor.formatOnType": true
   },
   "aws.resources.enabledResources": ["AWS::EC2::VPC"],
-  "[nginx]": {
-    "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
-  },
   "editor.smoothScrolling": true,
   "quokka.showOutputOnStart": false,
   // VS Code inside docker container doesn't fetch on file change, hence this setting
@@ -277,5 +278,6 @@ XML Tools
   "workbench.editor.tabSizing": "fixed",
   // "eslint.options": { "rules": {} } // This will override the .eslintrc.cjs file in your project so comment this out
   // Use LF rather than CRLF
-  "files.eol": "\n"
+  "files.eol": "\n",
+  "prisma.showPrismaDataPlatformNotification": false
 }
