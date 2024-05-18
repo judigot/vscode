@@ -901,25 +901,28 @@
 
   //====================JAVA====================//
   //====================BASH====================//
-  "Shebang (Bash)": {
+  "Boilerplate (Bash)": {
     "prefix": "boilerplate",
     "body": [
       "#!/bin/bash",
       "",
+      "${1:GLOBAL_VARIABLE=\"Hello, World!\"",
+      "",
       "main() {",
       "    action1",
       "    action2",
-      "}",
+      "\\}",
       "",
       "action1() {",
       "    echo -e \"Action 1\"",
-      "}",
+      "\\}",
       "",
       "action2() {",
       "    echo -e \"Action 2\"",
-      "}",
+      "\\}",
       "",
-      "main"
+      "main",
+      "}"
     ],
     "scope": "shellscript"
   },
