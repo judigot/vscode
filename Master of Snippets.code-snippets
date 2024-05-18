@@ -950,6 +950,12 @@
     ],
     "scope": "shellscript"
   },
+  "String Array (Bash)": {
+    "prefix": "varArrayOfText; arrayOfStringsVariable",
+    "body": ["arrayOfNumbersVariable=(\"Hello\" \"World!\")"],
+    "description": "String Array (Bash)",
+    "scope": "shellscript"
+  },
   "Convert Array/Object to String (Bash)": {
     "prefix": "serialize; serializeData; stringer",
     "body": [
