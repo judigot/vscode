@@ -137,6 +137,22 @@
     }
   },
   {
+    "key": "f10",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.terminal.focus",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "clear && pnpm run dev\n"
+          }
+        }
+      ]
+    },
+    "when": "!terminalFocus"
+  },
+  {
     "key": "ctrl+f9",
     "command": "workbench.action.terminal.sendSequence",
     "args": {
@@ -160,22 +176,6 @@
           "command": "workbench.action.terminal.sendSequence",
           "args": {
             "text": "clear && pnpm start\n"
-          }
-        }
-      ]
-    },
-    "when": "!terminalFocus"
-  },
-  {
-    "key": "f10",
-    "command": "extension.multiCommand.execute",
-    "args": {
-      "sequence": [
-        "workbench.action.terminal.focus",
-        {
-          "command": "workbench.action.terminal.sendSequence",
-          "args": {
-            "text": "clear && pnpm run dev\n"
           }
         }
       ]
