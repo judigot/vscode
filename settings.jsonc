@@ -211,7 +211,7 @@ XML Tools
   "files.restoreUndoStack": false,
   "files.exclude": {
     "**/node_modules/**": true,
-    ".history": true,
+    "**/.next/**": true,
     "**/.history": true
   },
   // Action when clicking script name
