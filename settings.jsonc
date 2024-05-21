@@ -148,7 +148,7 @@ XML Tools
     arch: 64
 
    */
-  // "php.validate.executablePath": "C:/xampp/php/php.exe",
+  "php.validate.executablePath": "C:/apportable/Programming/php/php.exe",
   // Controls whether the built-in PHP language suggestions are enabled. The support suggests PHP globals and variables.
   "php.suggest.basic": true,
   // Enable/disable built-in PHP validation.
