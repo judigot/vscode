@@ -133,7 +133,7 @@
     "key": "f10",
     "command": "workbench.action.terminal.sendSequence",
     "args": {
-      "text": "clear && pnpm run dev\n"
+      "text": "clear && if [ -f artisan ] && grep -q '\"name\": \"laravel/laravel\"' composer.json; then php artisan serve; elif [ -f pom.xml ] && grep -q '<parent>.*<artifactId>spring-boot-starter-parent</artifactId>.*</parent>' pom.xml; then mvn spring-boot:run; else pnpm run dev; fi\n"
     }
   },
   {
@@ -145,7 +145,7 @@
         {
           "command": "workbench.action.terminal.sendSequence",
           "args": {
-            "text": "clear && pnpm run dev\n"
+            "text": "clear && if [ -f artisan ] && grep -q '\"name\": \"laravel/laravel\"' composer.json; then php artisan serve; elif [ -f pom.xml ] && grep -q '<parent>.*<artifactId>spring-boot-starter-parent</artifactId>.*</parent>' pom.xml; then mvn spring-boot:run; else pnpm run dev; fi\n"
           }
         }
       ]
