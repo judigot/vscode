@@ -28,6 +28,18 @@
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
+        "namespaceResolver.importAll",
+        "namespaceResolver.sort",
+        "editor.action.formatDocument"
+      ]
+    },
+    "when": "editorTextFocus && !editorReadonly && (editorLangId == php)"
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
         "editor.action.formatDocument",
         "typescript.removeUnusedImports",
         "javascript.removeUnusedImports",
