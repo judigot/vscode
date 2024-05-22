@@ -2342,34 +2342,15 @@
   },
   //====================REACT.JS====================//
   //====================PHP====================//
-  "Display Array as Table Lite": {
-    "prefix": "logarrayastablelite",
-    "body": [
-      "\\$quickTable = \\$${1:array}; echo \"<span>Total rows: \" . count(\\$quickTable) . \"</span><table style='text-align: center; border:1px solid black; border-collapse:collapse;'> <tr>\"; foreach (array_keys(\\$quickTable[0]) as \\$key => \\$value) { echo \"<th style='border:1px solid black;'>\\$value</th>\"; } echo \"</tr>\"; foreach (\\$quickTable as \\$key => \\$value) { echo \"<tr>\"; foreach (\\$value as \\$key => \\$value) { echo \"<td style='border:1px solid black;'>\\$value</td>\"; } echo \"</tr>\"; } echo \"</table>\";"
-    ],
-    "scope": "php"
-  },
   "Display Array as Table": {
     "prefix": "logarrayastable",
     "body": [
       "//====================QUICKTABLE====================//",
-      "\\$quickTable = \\$${1:array};",
-      "echo \"<span>Total rows: \" . count(\\$quickTable) . \"</span><table style='text-align: center; border:1px solid black; border-collapse:collapse;'>",
-      "<tr>\";",
-      "foreach (array_keys(\\$quickTable[0]) as \\$key => \\$value) {",
-      "    echo \"<th style='border:1px solid black;'>\\$value</th>\";",
-      "}",
-      "echo \"</tr>\";",
-      "foreach (\\$quickTable as \\$key => \\$value) {",
-      "    echo \"<tr>\";",
-      "    foreach (\\$value as \\$key => \\$value) {",
-      "        echo \"<td style='border:1px solid black;'>\\$value</td>\";",
-      "    }",
-      "    echo \"</tr>\";",
-      "}",
-      "echo \"</table>\";",
-      "//====================QUICKTABLE====================//",
-      "exit;"
+      "\\$quickTable = \\$${1:data};",
+      "\\$quickTable = array_map(fn (\\$item) => is_object(\\$item) ? (array) \\$item : \\$item, \\$quickTable);",
+      "echo \"<span>Total rows: \" . count(\\$quickTable) . \"</span><table style='text-align: center; border:1px solid black; border-collapse:collapse;'><tr>\" . (count(\\$quickTable) > 0 ? implode('', array_map(fn (\\$value) => \"<th style='border:1px solid black;'>\\$value</th>\", array_keys((array) \\$quickTable[0]))) . \"</tr>\" . implode('', array_map(fn (\\$row) => \"<tr>\" . implode('', array_map(fn (\\$cell) => \"<td style='border:1px solid black;'>\\$cell</td>\", (array) \\$row)) . \"</tr>\", \\$quickTable)) : \"<tr><td colspan='1'>No data available</td></tr>\") . \"</table>\";",
+      "exit;",
+      "//====================QUICKTABLE====================//"
     ],
     "scope": "php"
   },
