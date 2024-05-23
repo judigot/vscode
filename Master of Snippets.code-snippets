@@ -1,4 +1,8 @@
 {
+  "Remove Character": {
+    "prefix": "removeCharacter",
+    "body": ["${TM_SELECTED_TEXT/[_]//g}"]
+  },
   "Snippetter: Snippet Helper": {
     "prefix": "snippetter",
     "body": ["\"${TM_SELECTED_TEXT/([\"$])/\\\\$1/g}\","]
