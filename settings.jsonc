@@ -208,6 +208,10 @@ XML Tools
   "editor.acceptSuggestionOnCommitCharacter": false,
   "liveServer.settings.donotShowInfoMsg": true,
   "cSpell.userWords": ["chunkhash", "jsxdev", "nodir", "purgecss", "tanstack"],
+  "cSpell.diagnosticLevel": "Hint",
+  "workbench.colorCustomizations": {
+    "editorHint.foreground": "#FFA500"
+  },
   "files.restoreUndoStack": false,
   "files.exclude": {
     "**/node_modules/**": true,
@@ -230,7 +234,8 @@ XML Tools
   "files.associations": {
     "*.code-snippets": "json",
     "compose*.yml": "yaml",
-    "docker-compose*.yml": "yaml"
+    "docker-compose*.yml": "yaml",
+    "*.scss": "tailwindcss"
   },
   "explorer.autoReveal": false, // Prevents VS Code from scrolling to the opened file when closing a another file
   "html.format.templating": true,
@@ -239,7 +244,7 @@ XML Tools
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.preferences.importModuleSpecifier": "non-relative", // use @/ instead of ../ in import suggestions
   "diffEditor.ignoreTrimWhitespace": false,
-  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
   "git.autofetch": true,
   "git.autofetchPeriod": 300,
   "git.postCommitCommand": "sync",
