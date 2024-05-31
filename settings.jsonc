@@ -139,17 +139,7 @@ XML Tools
   "sync.autoUpload": true,
   // "sync.forceUpload": true,
   "sync.quietSync": true,
-  /*NVM Settings (C:/judigot/Programming/Environment/nvm/settings.txt)
-
-  settings.txt:
-    root: C:/apportable/Programming/nvm
-    path: C:/apportable/Programming/nodejs
-    proxy: none
-    arch: 64
-
-   */
   "php.validate.executablePath": "C:/apportable/Programming/php/php.exe",
-  // Controls whether the built-in PHP language suggestions are enabled. The support suggests PHP globals and variables.
   "php.suggest.basic": true,
   // Enable/disable built-in PHP validation.
   "php.validate.enable": true, // docker exec -i <PHP container name> php %*
@@ -235,6 +225,7 @@ XML Tools
     "*.code-snippets": "json",
     "compose*.yml": "yaml",
     "docker-compose*.yml": "yaml",
+    "*.css": "tailwindcss",
     "*.scss": "tailwindcss"
   },
   "explorer.autoReveal": false, // Prevents VS Code from scrolling to the opened file when closing a another file
