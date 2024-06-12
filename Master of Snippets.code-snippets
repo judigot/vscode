@@ -1544,23 +1544,23 @@
   //====================RUBY====================//
   //====================TYPESCRIPT/JAVASCRIPT====================//
   "String Variable (TypeScript/JavaScript)": {
-    "prefix": "varText; stringVariable",
-    "body": ["const ${1:stringVariable}: string = \"${2:Hello, World!}\";"],
+    "prefix": "varString; varText; stringVariable",
+    "body": ["const ${1:stringVariable} = \"${2:Hello, World!}\";"],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Integer Number Variable (TypeScript/JavaScript)": {
-    "prefix": "varNumber; numberIntegerVariable",
-    "body": ["const ${1:numberIntegerVariable}: number = ${2:100};"],
+    "prefix": "varNumber; varInt; numberIntegerVariable",
+    "body": ["const ${1:numberIntegerVariable} = ${2:100};"],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Float Number Variable (TypeScript/JavaScript)": {
-    "prefix": "varDecimal; numberFloatVariable",
-    "body": ["const ${1:numberFloatVariable}: number = ${2:3.14};"],
+    "prefix": "varDecimal; varFloat; numberFloatVariable",
+    "body": ["const ${1:numberFloatVariable} = ${2:3.14};"],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Boolean Variable (TypeScript/JavaScript)": {
     "prefix": "varBoolean; booleanVariable",
-    "body": ["const ${1:booleanVariable}: boolean = ${2:true};"],
+    "body": ["const ${1:booleanVariable} = ${2:true};"],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Object Variable (TypeScript/JavaScript)": {
@@ -1738,6 +1738,12 @@
       "  cleanUp();",
       "}"
     ],
+    "scope": "typescript, javascript, typescriptreact, javascriptreact"
+  },
+
+  "For Loop N Times (TypeScript/JavaScript)": {
+    "prefix": "forLoop; loop; loopNTimes; loopANumberOfTimes",
+    "body": ["for (let i = 0; i < ${1:10}; i++) {", "  ${2:// Code}", "}"],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
 
@@ -2154,6 +2160,16 @@
     "body": ["type ${1:Type} = {", "  key1: number;", "  key2: string;", "};"],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
+  "Object Type (TypeScript/JavaScript)": {
+    "prefix": "typeObject",
+    "body": ["Record<string, ${1|string,number,boolean,unknown,unknown[]|}>"],
+    "scope": "typescript, javascript, typescriptreact, javascriptreact"
+  },
+  "Object Array Type (TypeScript/JavaScript)": {
+    "prefix": "typeArrayOfObjects",
+    "body": ["Record<string, ${1|string,number,boolean,unknown,unknown[]|}>[]"],
+    "scope": "typescript, javascript, typescriptreact, javascriptreact"
+  },
   "Array Values as Type (TypeScript/JavaScript)": {
     "prefix": "arrayValuesAsType",
     "body": ["(typeof ${1:arrayOfObjects})[number]"],
@@ -2301,7 +2317,7 @@
   },
   //====================TYPESCRIPT/JAVASCRIPT====================//
   //====================REACT.JS====================//
-  "React Boilerplate": {
+  "React Boilerplate (React)": {
     "prefix": "boilerplate",
     "body": [
       "import React from \"react\";",
@@ -2325,14 +2341,14 @@
     ],
     "scope": "typescriptreact, javascriptreact"
   },
-  "UseState": {
+  "UseState (React)": {
     "prefix": "useState",
     "body": [
       "const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState<${2:string}>(${3:});"
     ],
     "scope": "typescriptreact, javascriptreact"
   },
-  "UseState Expensive": {
+  "UseState Expensive (React)": {
     "prefix": "useStateExpensive; useStateLazy",
     "body": [
       "const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState<${2:string}>(() => {",
@@ -2341,6 +2357,15 @@
       "  };",
       "  return expensiveCalculation();",
       "});"
+    ],
+    "scope": "typescriptreact, javascriptreact"
+  },
+  "Iterate Data (React)": {
+    "prefix": "iterateData",
+    "body": [
+      "{",
+      "  ${1:data}?.map(({ ${2:id, firstName} }, i) => <div key={id}>{row}</div>);",
+      "}"
     ],
     "scope": "typescriptreact, javascriptreact"
   },
