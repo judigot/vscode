@@ -2320,16 +2320,20 @@
   "React Boilerplate (React)": {
     "prefix": "boilerplate",
     "body": [
-      "import React from \"react\";",
+      "import { useState } from 'react';",
       "",
       "function App() {",
-      "  const [count, setCount] = React.useState<number>(0);",
+      "  const [count, setCount] = useState<number>(0);",
       "",
       "  return (",
-      "    <div style={{ zoom: \"500%\", textAlign: \"center\" }}>",
+      "    <div style={{ zoom: '500%', textAlign: 'center' }}>",
       "      <h1>Big Bang</h1>",
       "      <div>",
-      "        <button onClick={(): void => setCount((count: number) => count + 1)}>",
+      "        <button",
+      "          onClick={(): void => {",
+      "            setCount((count: number) => count + 1);",
+      "          }}",
+      "        >",
       "          count is {count}",
       "        </button>",
       "      </div>",
@@ -2337,7 +2341,8 @@
       "  );",
       "}",
       "",
-      "export default App;"
+      "export default App;",
+      ""
     ],
     "scope": "typescriptreact, javascriptreact"
   },
