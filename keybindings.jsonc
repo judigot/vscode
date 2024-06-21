@@ -168,7 +168,7 @@
     "key": "ctrl+f9",
     "command": "workbench.action.terminal.sendSequence",
     "args": {
-      "text": "clear && npx webpack --env buildType=production --mode production & npx babel --extensions '.tsx,.ts,.jsx,.js' src --ignore src/components,src/config,src/migrations,src/models,src/public,src/seeders,src/tests -d dist && NODE_ENV=production node dist/index.js\n"
+      "text": "clear && pnpm build && pnpm start\n"
     }
   },
   {
@@ -203,7 +203,7 @@
         {
           "command": "workbench.action.terminal.sendSequence",
           "args": {
-            "text": "clear && npx webpack --env buildType=production --mode production & npx babel --extensions '.tsx,.ts,.jsx,.js' src --ignore src/components,src/config,src/migrations,src/models,src/public,src/seeders,src/tests -d dist && NODE_ENV=production node dist/index.js\n"
+            "text": "clear && pnpm build && pnpm start\n"
           }
         }
       ]
