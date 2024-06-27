@@ -72,6 +72,7 @@ vscode-styled-components
 WSL
 XML Tools
   /*====================EXTENSIONS====================*/
+  "workbench.colorTheme": "Default Dark Modern",
   // "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.defaultProfile.windows": "MSYS2",
   "terminal.integrated.profiles.windows": {
@@ -140,6 +141,7 @@ XML Tools
   // "sync.forceUpload": true,
   "sync.quietSync": true,
   "php.validate.executablePath": "C:/apportable/Programming/php/php.exe",
+  "php.executablePath": "C:/apportable/Programming/php/php.exe",
   "php.suggest.basic": true,
   // Enable/disable built-in PHP validation.
   "php.validate.enable": true, // docker exec -i <PHP container name> php %*
