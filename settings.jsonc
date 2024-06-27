@@ -1,76 +1,76 @@
 {
   /*====================EXTENSIONS====================*/ /*
   Auto Close Tag - don't delete; autocloses HTML tags even in a string
-Auto Rename Tag - don't delete; autorenames HTML tags inside PHP files
-AWS Toolkit
-Backticks
-Bash IDE
-Bookmarks
-Code Runner
-Code Spell Checker
-Comment Box
-Compare Folders
-CSS Peek
-Dev Containers
-Docker
-DotENV
-EJS language support
-Error Lens
-ES7+ React/Redux/React-Native snippets
-ESLint
-GitLens - Git supercharged
-GraphQL: Language Feature Support
-GraphQL: Syntax Highlighting
-HashiCorp Terraform
-HTML CSS Support
-html to JSX
-Import Cost
-indent-rainbow
-Inline SQL
-IntelliCode
-IntelliCode API Usage Examples
-isort
-JavaScript (ES6) code snippets
-Jupyter
-Jupyter Cell Tags
-Jupyter Keymap
-Jupyter Notebook Renderers
-Jupyter Slide Show
-Live Server
-Local History
-Markdown All in One
-multi-command
-NGINX Configuration Language Support
-Paste HTML as JSX
-Paste JSON as Code
-PHP Debug
-PHP Extension Pack
-PHP Intelephense
-Prettier - Code formatter
-Pretty TypeScript Errors
-Prisma
-Project Manager
-Pylance
-Python
-Quokka.js
-Rainbow CSV
-Remote - SSH
-Remote - SSH: Editing Configuration Files
-Remote Explorer
-Rest Client
-ShellCheck
-shell-format
-Spring Boot Extension Pack
-SQLTools
-SQLTools MySQL/MariaDB/TiDB
-Tabnine
-Tailwind CSS IntelliSense
-TypeScript Explicit Types
-VSCode React Refactor
-vscode-icons
-vscode-styled-components
-WSL
-XML Tools
+  Auto Rename Tag - don't delete; autorenames HTML tags inside PHP files
+  AWS Toolkit
+  Backticks
+  Bash IDE
+  Bookmarks
+  Code Runner
+  Code Spell Checker
+  Comment Box
+  Compare Folders
+  CSS Peek
+  Dev Containers
+  Docker
+  DotENV
+  EJS language support
+  Error Lens
+  ES7+ React/Redux/React-Native snippets
+  ESLint
+  GitLens - Git supercharged
+  GraphQL: Language Feature Support
+  GraphQL: Syntax Highlighting
+  HashiCorp Terraform
+  HTML CSS Support
+  html to JSX
+  Import Cost
+  indent-rainbow
+  Inline SQL
+  IntelliCode
+  IntelliCode API Usage Examples
+  isort
+  JavaScript (ES6) code snippets
+  Jupyter
+  Jupyter Cell Tags
+  Jupyter Keymap
+  Jupyter Notebook Renderers
+  Jupyter Slide Show
+  Live Server
+  Local History
+  Markdown All in One
+  multi-command
+  NGINX Configuration Language Support
+  Paste HTML as JSX
+  Paste JSON as Code
+  PHP Debug
+  PHP Extension Pack
+  PHP Intelephense
+  Prettier - Code formatter
+  Pretty TypeScript Errors
+  Prisma
+  Project Manager
+  Pylance
+  Python
+  Quokka.js
+  Rainbow CSV
+  Remote - SSH
+  Remote - SSH: Editing Configuration Files
+  Remote Explorer
+  Rest Client
+  ShellCheck
+  shell-format
+  Spring Boot Extension Pack
+  SQLTools
+  SQLTools MySQL/MariaDB/TiDB
+  Tabnine
+  Tailwind CSS IntelliSense
+  TypeScript Explicit Types
+  VSCode React Refactor
+  vscode-icons
+  vscode-styled-components
+  WSL
+  XML Tools
   /*====================EXTENSIONS====================*/
   "workbench.colorTheme": "Default Dark Modern",
   // "terminal.integrated.defaultProfile.windows": "Git Bash",
