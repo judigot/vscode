@@ -140,7 +140,6 @@
   "sync.autoUpload": true,
   // "sync.forceUpload": true,
   "sync.quietSync": true,
-  "php.validate.executablePath": "C:/apportable/Programming/php/php.exe",
   "php.executablePath": "C:/apportable/Programming/php/php.exe",
   "php.suggest.basic": true,
   // Enable/disable built-in PHP validation.
@@ -228,7 +227,7 @@
     "compose*.yml": "yaml",
     "docker-compose*.yml": "yaml",
     "*.css": "tailwindcss",
-    "*.scss": "tailwindcss"
+    "*.scss": "scss"
   },
   "explorer.autoReveal": false, // Prevents VS Code from scrolling to the opened file when closing a another file
   "html.format.templating": true,
