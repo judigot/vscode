@@ -2113,6 +2113,7 @@
     "prefix": "server",
     "body": [
       "import http from \"http\";",
+      "// const http = require('http');",
       "",
       "http",
       "  .createServer(function (request, response) {",
