@@ -198,10 +198,10 @@
     "source.addMissingImports.ts": "always",
     "source.fixAll.eslint": "always",
     "source.fixAll.ts": "always",
-    "source.organizeImports": "always",
+    // "source.organizeImports": "always",
     "source.removeUnused.ts": "always",
-    "source.removeUnusedImports": "always",
-    "source.sortImports": "always"
+    "source.removeUnusedImports": "always"
+    // "source.sortImports": "always"
   },
   "editor.linkedEditing": true,
   // Prevent autocomplete when pressing "."
