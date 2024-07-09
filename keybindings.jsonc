@@ -29,7 +29,7 @@
     "args": {
       "sequence": [
         "namespaceResolver.importAll",
-        // "namespaceResolver.sort",
+        "namespaceResolver.sort",
         "editor.action.formatDocument"
       ]
     },
@@ -40,6 +40,7 @@
     "command": "extension.multiCommand.execute",
     "args": {
       "sequence": [
+        "workbench.action.files.save",
         "editor.action.formatDocument",
         "typescript.removeUnusedImports",
         "javascript.removeUnusedImports",

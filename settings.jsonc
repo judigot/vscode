@@ -194,6 +194,15 @@
   "[nginx]": {
     "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
   },
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports.ts": "always",
+    "source.fixAll.eslint": "always",
+    "source.fixAll.ts": "always",
+    "source.organizeImports": "always",
+    "source.removeUnused.ts": "always",
+    "source.removeUnusedImports": "always",
+    "source.sortImports": "always"
+  },
   "editor.linkedEditing": true,
   // Prevent autocomplete when pressing "."
   "editor.acceptSuggestionOnCommitCharacter": false,
@@ -223,6 +232,7 @@
   },
   // Associate file extensions to a certain language
   "files.associations": {
+    "*.erb": "html",
     "*.code-snippets": "json",
     "compose*.yml": "yaml",
     "docker-compose*.yml": "yaml",
