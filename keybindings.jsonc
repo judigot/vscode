@@ -24,6 +24,10 @@
   },
   /*==========RESOLVE MARKDOWN PREVIEW & PASTE JSON AS CODE CONFLICT==========*/
   {
+    "key": "ctrl+shift+w",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  {
     "key": "shift+alt+f",
     "command": "extension.multiCommand.execute",
     "args": {
