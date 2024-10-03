@@ -73,6 +73,8 @@
   XML Tools
   /*====================EXTENSIONS====================*/
   "workbench.colorTheme": "Default Dark Modern",
+  "workbench.preferredDarkColorTheme": "Default Dark Modern",
+  "workbench.preferredLightColorTheme": "Default Dark Modern",
   // "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.defaultProfile.windows": "MSYS2",
   "terminal.integrated.profiles.windows": {
@@ -197,11 +199,10 @@
   "editor.codeActionsOnSave": {
     "source.addMissingImports.ts": "always",
     "source.fixAll.eslint": "always",
-    // "source.fixAll.ts": "always",
-    // "source.organizeImports": "always",
-    "source.removeUnused.ts": "always",
+    "source.fixAll.ts": "always",
     "source.removeUnusedImports": "always"
     // "source.sortImports": "always"
+    // "source.organizeImports": "always"
   },
   "editor.linkedEditing": true,
   // Prevent autocomplete when pressing "."
