@@ -39,21 +39,27 @@
     },
     "when": "editorTextFocus && !editorReadonly && (editorLangId == php)"
   },
-  {
-    "key": "shift+alt+f",
-    "command": "extension.multiCommand.execute",
-    "args": {
-      "sequence": [
-        "workbench.action.files.save",
-        "editor.action.formatDocument",
-        "typescript.removeUnusedImports",
-        "javascript.removeUnusedImports",
-        "eslint.executeAutofix",
-        "editor.action.formatDocument"
-      ]
-    },
-    "when": "editorTextFocus && !editorReadonly && (editorLangId == typescript || editorLangId == typescriptreact || editorLangId == javascript || editorLangId == javascriptreact)"
-  },
+  // {
+  //   "key": "shift+alt+f",
+  //   "command": "extension.multiCommand.execute",
+  //   "args": {
+  //     "sequence": [
+  //       {
+  //         "command": "editor.action.sourceAction",
+  //         "args": {
+  //           "kind": "source.addMissingImports",
+  //           "apply": "first"
+  //         }
+  //       },
+  //       "editor.action.formatDocument",
+  //       "javascript.removeUnusedImports",
+  //       "eslint.executeAutofix",
+  //       "editor.action.formatDocument",
+  //       "editor.action.formatDocument"
+  //     ]
+  //   },
+  //   "when": "editorTextFocus && !editorReadonly && (editorLangId == typescript || editorLangId == typescriptreact || editorLangId == javascript || editorLangId == javascriptreact)"
+  // },
   {
     "key": "ctrl+shift+alt+backspace",
     "command": "workbench.action.terminal.sendSequence",
