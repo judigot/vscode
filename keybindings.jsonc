@@ -139,6 +139,13 @@
     }
   },
   {
+    "key": "ctrl+shift+alt+=",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "git stash -u\ngit stash branch new-branch-name"
+    }
+  },
+  {
     "key": "ctrl+shift+alt+right",
     "command": "workbench.action.terminal.sendSequence",
     "args": {
