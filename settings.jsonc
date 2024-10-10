@@ -142,6 +142,7 @@
   "sync.autoUpload": true,
   // "sync.forceUpload": true,
   "sync.quietSync": true,
+  "php.validate.executablePath": "C:/apportable/Programming/php/php.exe",
   "php.executablePath": "C:/apportable/Programming/php/php.exe",
   "php.suggest.basic": true,
   // Enable/disable built-in PHP validation.
