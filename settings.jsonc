@@ -81,7 +81,7 @@
     "Git Bash": {
       "path": ["C:/apportable/Programming/PortableGit/bin/bash.exe"],
       "env": {
-        "HOME": "C:/Users/Jude", // Uses the .bashrc located at C:/Users/Jude
+        "HOME": "C:/Users/${env:USERNAME}", // Uses the .bashrc located at C:/Users/${env:USERNAME}
         "MSYSTEM": "MSYS",
         "CHERE_INVOKING": "1" // Start the terminal in the directory from which it was launched
       },
@@ -93,7 +93,7 @@
       "path": "C:/apportable/Programming/msys64/usr/bin/bash.exe",
       "args": ["--login", "-i", "-c", "zsh"],
       "env": {
-        "HOME": "C:/Users/Jude", // Uses the .bashrc located at C:/Users/Jude
+        "HOME": "C:/Users/${env:USERNAME}", // Uses the .bashrc located at C:/Users/${env:USERNAME}
         "MSYSTEM": "MSYS",
         "CHERE_INVOKING": "1" // Start the terminal in the directory from which it was launched
       },
@@ -105,7 +105,7 @@
       "path": "C:/apportable/Programming/msys64/usr/bin/bash.exe",
       "args": ["--login", "-i"],
       "env": {
-        "HOME": "C:/Users/Jude", // Uses the .bashrc located at C:/Users/Jude
+        "HOME": "C:/Users/${env:USERNAME}", // Uses the .bashrc located at C:/Users/${env:USERNAME}
         "MSYSTEM": "MSYS",
         "CHERE_INVOKING": "1" // Start the terminal in the directory from which it was launched
       },
@@ -117,7 +117,7 @@
       "path": "C:/apportable/Programming/msys64/usr/bin/bash.exe",
       "args": ["--login", "-i"],
       "env": {
-        "HOME": "C:/apportable/Programming/msys64/home/Jude",
+        "HOME": "C:/apportable/Programming/msys64/home/${env:USERNAME}",
         "MSYSTEM": "MSYS",
         "CHERE_INVOKING": "1"
       },
@@ -127,9 +127,9 @@
     }
   },
   "terminal.integrated.env.windows": {
-    // PATH variable is set in C:/Users/Jude/.bashrc
+    // PATH variable is set in C:/Users/${env:USERNAME}/.bashrc
     // "SAMPLE_ENV": "",
-    "PATH": "${env:PATH}:/c/apportable/Programming/PortableGit/cmd:/c/apportable/Programming/deno:/c/apportable/Programming/nvm:/c/apportable/Programming/nodejs:/c/apportable/Programming/nodejs/node_modules/npm/bin:/c/apportable/Programming/jdk/bin:/c/apportable/Programming/sqlite:/c/apportable/Programming/terraform:/c/apportable/Programming/pulumi/bin:/c/Users/Jude/AppData/Local/Programs/Microsoft VS Code/bin:/c/Program Files/Docker/Docker/resources/bin:/c/ProgramData/DockerDesktop/version-bin:"
+    "PATH": "${env:PATH}:/c/apportable/Programming/PortableGit/cmd:/c/apportable/Programming/deno:/c/apportable/Programming/nvm:/c/apportable/Programming/nodejs:/c/apportable/Programming/nodejs/node_modules/npm/bin:/c/apportable/Programming/jdk/bin:/c/apportable/Programming/sqlite:/c/apportable/Programming/terraform:/c/apportable/Programming/pulumi/bin:/c/Users/${env:USERNAME}/AppData/Local/Programs/Microsoft VS Code/bin:/c/Program Files/Docker/Docker/resources/bin:/c/ProgramData/DockerDesktop/version-bin:"
   },
   "java.jdt.ls.java.home": "C:/apportable/Programming/jdk",
   "git.path": "C:/apportable/Programming/PortableGit/bin/git.exe",
@@ -226,7 +226,8 @@
   "code-runner.executorMap": {
     "java": "clear && cd $(echo $dirWithoutTrailingSlash | sed '/\\/\\//g') && javac $fileName && java $fileNameWithoutExt",
     "javascript": "clear && if echo $fullFileName | awk '/tempCodeRunnerFile\\.(javascript|ts|tsx)/ {exit 0} {exit 1}'; then if node -e \"try {require('esbuild-register')} catch (e) {process.exit(1)}\"; then node -r esbuild-register $fullFileName; else deno run --allow-all $fullFileName; fi; else if node -e \"try {require('esbuild-register')} catch (e) {process.exit(1)}\"; then node -r esbuild-register $fullFileName; else deno run --allow-all $fullFileName; fi; fi",
-    "typescript": "clear && if echo $fullFileName | awk '/tempCodeRunnerFile\\.(javascript|ts|tsx)/ {exit 0} {exit 1}'; then if node -e \"try {require('esbuild-register')} catch (e) {process.exit(1)}\"; then node -r esbuild-register $fullFileName; else deno run --allow-all $fullFileName; fi; else if node -e \"try {require('esbuild-register')} catch (e) {process.exit(1)}\"; then node -r esbuild-register $fullFileName; else deno run --allow-all $fullFileName; fi; fi",
+    // "typescript": "clear && if echo $fullFileName | awk '/tempCodeRunnerFile\\.(javascript|ts|tsx)/ {exit 0} {exit 1}'; then if node -e \"try {require('esbuild-register')} catch (e) {process.exit(1)}\"; then node -r esbuild-register $fullFileName; else deno run --allow-all $fullFileName; fi; else if node -e \"try {require('esbuild-register')} catch (e) {process.exit(1)}\"; then node -r esbuild-register $fullFileName; else deno run --allow-all $fullFileName; fi; fi",
+    "typescript": "clear && deno run --allow-all $fullFileName",
     "typescriptreact": "clear && if echo $fullFileName | awk '/tempCodeRunnerFile\\.(javascript|ts|tsx)/ {exit 0} {exit 1}'; then if node -e \"try {require('esbuild-register')} catch (e) {process.exit(1)}\"; then node -r esbuild-register $fullFileName; else deno run --allow-all $fullFileName; fi; else if node -e \"try {require('esbuild-register')} catch (e) {process.exit(1)}\"; then node -r esbuild-register $fullFileName; else deno run --allow-all $fullFileName; fi; fi",
     "python": "clear && PYTHON_VERSION=$(echo $(python3 --version || python2 --version || python --version) | awk '{split($2, a, \".\"); print a[1]}'); clear; \"python$(echo $PYTHON_VERSION)\"",
     "ruby": "clear && ruby",
