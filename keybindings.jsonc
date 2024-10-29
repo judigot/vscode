@@ -33,7 +33,7 @@
     "args": {
       "sequence": [
         "namespaceResolver.importAll",
-        "namespaceResolver.sort",
+        // "namespaceResolver.sort",
         "editor.action.formatDocument"
       ]
     },
