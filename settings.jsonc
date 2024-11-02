@@ -221,6 +221,7 @@
   "files.exclude": {
     "**/.terraform/**": true,
     "**/.terraform.lock.hcl/**": true,
+    "**/terraform.tfstate/**": true,
     "**/terraform.tfstate.backup/**": true,
     "**/node_modules/**": true,
     "**/.next/**": true,
