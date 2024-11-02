@@ -219,6 +219,9 @@
   },
   "files.restoreUndoStack": false,
   "files.exclude": {
+    "**/.terraform/**": true,
+    "**/.terraform.lock.hcl/**": true,
+    "**/terraform.tfstate.backup/**": true,
     "**/node_modules/**": true,
     "**/.next/**": true,
     "**/.history": true
