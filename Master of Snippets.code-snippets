@@ -48,7 +48,7 @@
   //====================PYTHON====================//
   "String Variable (Python)": {
     "prefix": "varText; stringVariable",
-    "body": ["${1:stringVariable} = \"${2:Hello, World!}\""],
+    "body": ["${1:stringVariable} = ${2:\"${3:Hello, World!}\"}"],
     "scope": "python"
   },
   "Integer Number Variable (Python)": {
@@ -444,7 +444,7 @@
   //====================JAVA====================//
   "String Variable (Java)": {
     "prefix": "varText; stringVariable",
-    "body": ["String ${1:stringVariable} = \"${2:Hello, World!}\";"],
+    "body": ["String ${1:stringVariable} = ${2:\"${3:Hello, World!}\"};"],
     "scope": "java"
   },
   "Integer Number Variable (Java)": {
@@ -507,7 +507,23 @@
   "Class (Java)": {
     "prefix": "class",
     "body": [
-      "public class ${1:Person} {",
+      "// Save this in Main.java",
+      "",
+      "public class Main {",
+      "    public static void main(String[] args) {",
+      "        // Usage",
+      "        Person myInstance = new Person(\"Initial Private Value\", 42);",
+      "        System.out.println(myInstance.getPrivateProperty()); // Output: Initial Private Value",
+      "        System.out.println(myInstance.getPublicProperty()); // Output: 42",
+      "        myInstance.setPrivateProperty(\"New Private Value\");",
+      "        myInstance.setPublicProperty(99);",
+      "        System.out.println(myInstance.getPrivateProperty()); // Output: New Private Value",
+      "        System.out.println(myInstance.getPublicProperty()); // Output: 99",
+      "        System.out.println(Person.staticMethod()); // Output: This is a static method",
+      "    }",
+      "}",
+      "",
+      "class ${1:Person} {",
       "    // Properties",
       "    private String privateProperty;",
       "    public int publicProperty;",
@@ -538,20 +554,6 @@
       "    // Static method",
       "    public static String staticMethod() {",
       "        return \"This is a static method\";",
-      "    }",
-      "}",
-      "",
-      "public class Main {",
-      "    public static void main(String[] args) {",
-      "        // Usage",
-      "        Person myInstance = new Person(\"Initial Private Value\", 42);",
-      "        System.out.println(myInstance.getPrivateProperty()); // Output: Initial Private Value",
-      "        System.out.println(myInstance.getPublicProperty());  // Output: 42",
-      "        myInstance.setPrivateProperty(\"New Private Value\");",
-      "        myInstance.setPublicProperty(99);",
-      "        System.out.println(myInstance.getPrivateProperty()); // Output: New Private Value",
-      "        System.out.println(myInstance.getPublicProperty());  // Output: 99",
-      "        System.out.println(Person.staticMethod());            // Output: This is a static method",
       "    }",
       "}"
     ],
@@ -956,7 +958,7 @@
   },
   "String Array (Bash)": {
     "prefix": "varArrayOfText; arrayOfStringsVariable",
-    "body": ["arrayOfNumbersVariable=(\"Hello\" \"World!\")"],
+    "body": ["arrayOfStringsVariable=(\"Hello\" \"World!\")"],
     "description": "String Array (Bash)",
     "scope": "shellscript"
   },
@@ -1067,7 +1069,7 @@
   //====================RUBY====================//
   "String Variable (Ruby)": {
     "prefix": "varText; stringVariable",
-    "body": ["${1:stringVariable} = \"${2:Hello, World!}\""],
+    "body": ["${1:stringVariable} = ${2:\"${3:Hello, World!}\"}"],
     "scope": "ruby"
   },
   "Integer Number Variable (Ruby)": {
@@ -1545,7 +1547,7 @@
   //====================TYPESCRIPT/JAVASCRIPT====================//
   "String Variable (TypeScript/JavaScript)": {
     "prefix": "varString; varText; stringVariable",
-    "body": ["const ${1:stringVariable} = \"${2:Hello, World!}\";"],
+    "body": ["const ${1:stringVariable} = ${2:'${3:Hello, World!}'};"],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Integer Number Variable (TypeScript/JavaScript)": {
@@ -1877,28 +1879,28 @@
   "Print to Console (TypeScript/JavaScript)": {
     "prefix": "log",
     "body": [
-      "/*prettier-ignore*/ ((\\$=\"Hello, World!\")=>{console.log([\"string\",\"number\"].includes(typeof \\$)?\\$:JSON.stringify(\\$,null,4));})();"
+      "/*prettier-ignore*/ (($= ${1:'${2:Hello, World!}'})=>{console.log([\"string\",\"number\"].includes(typeof \\$)?\\$:JSON.stringify(\\$,null,4));})();"
     ],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Print Red to Console (TypeScript/JavaScript)": {
     "prefix": "logRed",
     "body": [
-      "/*prettier-ignore*/ ((\\$= 'Hello, World!')=>{console.log(['string','number'].includes(typeof \\$)?`%c\\${\\$}`:`%c\\${JSON.stringify(\\$,null,4)}`,\"color: red;\");})();"
+      "/*prettier-ignore*/ (($= ${1:'${2:Hello, World!}'})=>{console.log(['string','number'].includes(typeof \\$)?`%c\\${\\$}`:`%c\\${JSON.stringify(\\$,null,4)}`,\"color: red;\");})();"
     ],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Print Yellow to Console (TypeScript/JavaScript)": {
     "prefix": "logYellow",
     "body": [
-      "/*prettier-ignore*/ ((\\$ = 'Hello, World!')=>{console.log(['string','number'].includes(typeof \\$)?`%c\\${\\$}`:`%c\\${JSON.stringify(\\$,null,4)}`,\"color: yellow;\");})();"
+      "/*prettier-ignore*/ (($= ${1:'${2:Hello, World!}'})=>{console.log(['string','number'].includes(typeof \\$)?`%c\\${\\$}`:`%c\\${JSON.stringify(\\$,null,4)}`,\"color: yellow;\");})();"
     ],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Print Green to Console (TypeScript/JavaScript)": {
     "prefix": "logGreen",
     "body": [
-      "/*prettier-ignore*/ ((\\$ = 'Hello, World!')=>{console.log(['string','number'].includes(typeof \\$)?`%c\\${\\$}`:`%c\\${JSON.stringify(\\$,null,4)}`,\"color: green;\");})();"
+      "/*prettier-ignore*/ (($= ${1:'${2:Hello, World!}'})=>{console.log(['string','number'].includes(typeof \\$)?`%c\\${\\$}`:`%c\\${JSON.stringify(\\$,null,4)}`,\"color: green;\");})();"
     ],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
@@ -2115,7 +2117,7 @@
       "import http from \"http\";",
       "",
       "http",
-      "  .createServer(function (request, response) {",
+      "  .createServer(function (_request, response) {",
       "    response.setHeader(\"Content-Type\", \"application/json\");",
       "    response.end(JSON.stringify({ message: `Hello, World!` }));",
       "  })",
