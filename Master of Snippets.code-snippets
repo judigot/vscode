@@ -367,7 +367,7 @@
     "scope": "python"
   },
   "Recursion (Python)": {
-    "prefix": "recursion",
+    "prefix": "recursion; recursiveFunction",
     "body": [
       "def ${1:methodName}(param):",
       "    # Base Case",
@@ -807,7 +807,7 @@
     "scope": "java"
   },
   "Recursion (Java)": {
-    "prefix": "recursion",
+    "prefix": "recursion; recursiveFunction",
     "body": [
       "public int ${1:methodName}(int param) {",
       "  if (param == 10) {",
@@ -1452,7 +1452,7 @@
     "scope": "ruby"
   },
   "Recursion (Ruby)": {
-    "prefix": "recursion",
+    "prefix": "recursion; recursiveFunction",
     "body": [
       "def ${1:recursion}(param)",
       "    # Base Case",
@@ -1664,17 +1664,8 @@
   "Function (TypeScript/JavaScript)": {
     "prefix": "function",
     "body": [
-      "function ${1:functionName}(",
-      "  ${2:param1: number,",
-      "  {",
-      "    key1,",
-      "    key2,",
-      "  \\}: {",
-      "    key1: number;",
-      "    key2: string;",
-      "  \\}}",
-      "): boolean {",
-      "  return true;",
+      "function ${1:functionName}(${2:{ key1, key2 \\}: { key1: string; key2: string }}) {",
+      "  return `\\${key1} \\${key2}`;",
       "}"
     ],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
@@ -1943,7 +1934,7 @@
   },
   "IIFE (Immediately Invoked Function Expression) (TypeScript/JavaScript)": {
     "prefix": "IIFE; self-invoking expression; self-calling expression; self-invoking function; self-calling function;",
-    "body": ["(() => {", "  ${1}", "})()"],
+    "body": ["(() => {", "  ${1://}", "})()"],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Find Object Index (TypeScript/JavaScript)": {
@@ -1981,16 +1972,20 @@
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Recursion (TypeScript/JavaScript)": {
-    "prefix": "recursion",
+    "prefix": "recursion; recursiveFunction",
     "body": [
-      "function ${1:recursion}(param: number): number {",
-      "  // Base Case",
-      "  if (param === 10) {",
-      "    return param;",
+      "function fibonacci(n: number): number {",
+      "  /*",
+      "  fibonacci(10) // Returns 55, as it is the 10th number in the Fibonacci sequence",
+      "  */",
+      "",
+      "  // Base Case: Stop the recursion when the base case is reached.",
+      "  if (n <= 1) {",
+      "    return n;",
       "  }",
-
-      "  // Recursive Case",
-      "  return recursion(param + 1);",
+      "",
+      "  // Recursive Case: Continue calling the same function with different parameters until the base case is reached.",
+      "  return fibonacci(n - 1) + fibonacci(n - 2);",
       "}"
     ],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
@@ -2038,8 +2033,7 @@
   "Append to Object (TypeScript/JavaScript)": {
     "prefix": "appendToObject",
     "body": [
-      "// ${1:objectVariable} must have a defined property \"${2:key3}\" in its type",
-      "${1:objectVariable}.${2:key3} = ${3:\"${4:New Value}\"};"
+      "${1:objectVariable}.${2:key3} = ${3:\"${4:New Value}\"}; // ${1:objectVariable} must have a defined property \"${2:key3}\" in its type"
     ],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
@@ -2059,8 +2053,45 @@
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Multi-line String (TypeScript/JavaScript)": {
-    "prefix": "multilineString",
+    "prefix": "multilineString; heredoc",
     "body": ["`${1:Line 1", "Line 2", "Line 2}`"],
+    "scope": "typescript, javascript, typescriptreact, javascriptreact"
+  },
+  "Builder Pattern and Method Chaining (TypeScript/JavaScript)": {
+    "prefix": "builderPattern; methodChaining",
+    "body": [
+      "const calculator = (initialValue: number) => {",
+      "  /*",
+      "    Usage:",
+      "    const initialValue = 10;",
+      "    console.log(",
+      "    calculator(initialValue).add(5).multiply(2).subtract(10).divide(5).getResult()",
+      "    );",
+      "  */",
+      "  let result = initialValue;",
+      "",
+      "  const builder = {",
+      "    add: (value: number) => {",
+      "      result += value;",
+      "      return builder;",
+      "    },",
+      "    subtract: (value: number) => {",
+      "      result -= value;",
+      "      return builder;",
+      "    },",
+      "    multiply: (value: number) => {",
+      "      result *= value;",
+      "      return builder;",
+      "    },",
+      "    divide: (value: number) => {",
+      "      result /= value;",
+      "      return builder;",
+      "    },",
+      "    getResult: () => result,",
+      "  };",
+      "  return builder;",
+      "};"
+    ],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Namespace (TypeScript/JavaScript)": {
@@ -2075,7 +2106,11 @@
   },
   "Export Statement (TypeScript/JavaScript)": {
     "prefix": "export",
-    "body": ["export "],
+    "body": [
+      "export ${1:function functionName(${2:{ key1, key2 \\}: { key1: string; key2: string \\}}) {",
+      "  return `\\${key1\\} \\${key2\\}`;",
+      "\\}}"
+    ],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
 
@@ -2129,19 +2164,10 @@
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
   "Arrow Function Expression (TypeScript/JavaScript)": {
-    "prefix": "functionArrow",
+    "prefix": "arrowFunction; functionArrow",
     "body": [
-      "const ${1:arrowFunctionName} = (",
-      "  ${2:param1: number,",
-      "  {",
-      "    key1,",
-      "    key2,",
-      "  \\}: {",
-      "    key1: number;",
-      "    key2: string;",
-      "  \\}}",
-      "): boolean => {",
-      "  return true;",
+      "const ${1:functionName} = (${2:{ key1, key2 \\}: { key1: string; key2: string }}) => {",
+      "  return `\\${key1} \\${key2}`;",
       "};"
     ],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
@@ -2194,7 +2220,7 @@
   "Async Lambda Expression (TypeScript/JavaScript)": {
     "prefix": "asyncLambda; async anonymous function; async lambda expression",
     "body": [
-      "(async () => {",
+      "void (async () => {",
       "  try {",
       "    const result = await fetchData();",
       "    ",
@@ -2210,6 +2236,7 @@
       "      throw new Error(`Syntax Error: ${error}`);",
       "    }",
       "  } finally {",
+      "    //",
       "  }",
       "})();"
     ],
@@ -2223,29 +2250,82 @@
   "Asynchronous Function (TypeScript/JavaScript)": {
     "prefix": "asyncFunction",
     "body": [
-      "const asyncFunction = async () => {",
+      "async function asyncFunction(): Promise<unknown> {",
       "  try {",
-      "    if (true) {",
-      "      const a = await firstPromise();",
-      "      const b = await secondPromise(a);",
-      "      const c = await thirdPromise(b);",
-      "      return c;",
-      "    } else {",
-      "      throw new Error(\"Error 1\");",
+      "    // First API call",
+      "    const response1 = await fetch('https://randomuser.me/api/');",
+      "    if (!response1.ok) {",
+      "      throw new Error('Failed to fetch first request data');",
       "    }",
-      "    if (false) {",
-      "      throw new Error(\"Error 2\");",
+      "    const data1: unknown = await response1.json();",
+      "",
+      "    // Second API call",
+      "    const response2 = await fetch(",
+      "      'https://opentdb.com/api.php?amount=10&type=multiple',",
+      "    );",
+      "    if (!response2.ok) {",
+      "      throw new Error('Failed to fetch second request data');",
       "    }",
+      "    const data2: unknown = await response2.json();",
+      "",
+      "    // Combine the data from both APIs",
+      "    const combinedData = {",
+      "      data1,",
+      "      data2,",
+      "    };",
+      "",
+      "    return combinedData;",
       "  } catch (error: unknown) {",
-      "    if (typeof error === `string`) {",
+      "    if (typeof error === 'string') {",
       "      throw new Error(`There was an error: ${error}`);",
       "    }",
       "    if (error instanceof Error) {",
       "      throw new Error(`There was an error: ${error.message}`);",
       "    }",
+      "    throw new Error('An unknown error occurred');",
       "  }",
-      "};",
+      "}",
+      "",
       "// asyncFunction().then((result) => {/* Success */}).catch((error: unknown) => { /* Failure */ if (typeof error === `string`) { throw new Error(`There was an error: ${error}`); } if (error instanceof Error) { throw new Error(`There was an error: ${error.message}`); } }) .finally(() => { /* Finally */ });"
+    ],
+    "scope": "typescript, javascript, typescriptreact, javascriptreact"
+  },
+  "Asynchronous Arrow Function (TypeScript/JavaScript)": {
+    "prefix": "asyncArrowFunction",
+    "body": [
+      "const asyncFunction = async (): Promise<unknown> => {",
+      "  try {",
+      "    // First API call",
+      "    const response1 = await fetch('https://randomuser.me/api/');",
+      "    if (!response1.ok) {",
+      "      throw new Error('Failed to fetch first request data');",
+      "    }",
+      "    const data1: unknown = await response1.json();",
+      "",
+      "    // Second API call",
+      "    const response2 = await fetch('https://opentdb.com/api.php?amount=10&type=multiple');",
+      "    if (!response2.ok) {",
+      "      throw new Error('Failed to fetch second request data');",
+      "    }",
+      "    const data2: unknown = await response2.json();",
+      "",
+      "    // Combine the data from both APIs",
+      "    const combinedData = {",
+      "      data1,",
+      "      data2,",
+      "    };",
+      "",
+      "    return combinedData;",
+      "  } catch (error: unknown) {",
+      "    if (typeof error === 'string') {",
+      "      throw new Error(`There was an error: error`);",
+      "    }",
+      "    if (error instanceof Error) {",
+      "      throw new Error(`There was an error: ${error.message}`);",
+      "    }",
+      "    throw new Error('An unknown error occurred');",
+      "  }",
+      "};"
     ],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
