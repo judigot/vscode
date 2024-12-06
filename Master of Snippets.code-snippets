@@ -1937,6 +1937,24 @@
     "body": ["(() => {", "  ${1://}", "})()"],
     "scope": "typescript, javascript, typescriptreact, javascriptreact"
   },
+  "Search Array of Objects (TypeScript/JavaScript)": {
+    "prefix": "searchObjects, searchArrayOfObjects, findObject, findArrayOfObjects, findObjectInArrayOfObjects, filterObjects, filterData, searchData, findData, filterArrayOfObjects, findObjectInData, filterObjectInArray, searchObjectInArray, findDataInArray, searchObjectInData",
+    "body": [
+      "const arrayOfObjectsVariable = [",
+      "  {",
+      "    key1: 1,",
+      "    key2: \"Value 1\",",
+      "  },",
+      "  {",
+      "    key1: 2,",
+      "    key2: \"Value 2\",",
+      "  },",
+      "];",
+      "",
+      "const objects = arrayOfObjectsVariable.filter((object) => object.key1 === 1);"
+    ],
+    "scope": "typescript, javascript, typescriptreact, javascriptreact"
+  },
   "Find Object Index (TypeScript/JavaScript)": {
     "prefix": "findObjectIndex",
     "body": [
