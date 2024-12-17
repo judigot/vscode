@@ -13,6 +13,7 @@
   CSS Peek
   Dev Containers
   Docker
+  Deno for VSCode
   DotENV
   EJS language support
   Error Lens
@@ -224,7 +225,7 @@
     "**/terraform.tfstate/**": true,
     "**/terraform.tfstate.backup/**": true,
     "**/node_modules/**": true,
-    "**/.next/**": true,
+    "**/src/.next/**": true,
     "**/.history": true
   },
   // Action when clicking script name
@@ -294,5 +295,10 @@
   // "eslint.options": { "rules": {} } // This will override the .eslintrc.cjs file in your project so comment this out
   // Use LF rather than CRLF
   "files.eol": "\n",
-  "prisma.showPrismaDataPlatformNotification": false
+  "prisma.showPrismaDataPlatformNotification": false,
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "on",
+    "strings": "on"
+  }
 }
