@@ -261,6 +261,7 @@
   "javascript.suggest.completeFunctionCalls": true,
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.preferences.importModuleSpecifier": "non-relative", // use @/ instead of ../ in import suggestions
+  "typescript.preferences.importModuleSpecifierEnding": "js", // Add file extensions to imports
   "diffEditor.ignoreTrimWhitespace": false,
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "git.autofetch": true,
