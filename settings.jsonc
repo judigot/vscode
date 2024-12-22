@@ -76,6 +76,8 @@
   "workbench.colorTheme": "Default Dark Modern",
   "workbench.preferredDarkColorTheme": "Default Dark Modern",
   "workbench.preferredLightColorTheme": "Default Dark Modern",
+  "workbench.activityBar.location": "default",
+  "workbench.activityBar.orientation": "vertical",
   // "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.defaultProfile.windows": "MSYS2",
   "terminal.integrated.profiles.windows": {
