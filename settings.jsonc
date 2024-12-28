@@ -166,6 +166,9 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[sql]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -308,5 +311,6 @@
     "other": "on",
     "comments": "on",
     "strings": "on"
-  }
+  },
+  "chat.editing.alwaysSaveWithGeneratedChanges": true
 }
