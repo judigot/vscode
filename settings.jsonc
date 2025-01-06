@@ -166,9 +166,6 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[sql]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
-  },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -221,7 +218,6 @@
   },
   "editor.linkedEditing": true,
   // Prevent autocomplete when pressing "."
-  "editor.acceptSuggestionOnCommitCharacter": false,
   "liveServer.settings.donotShowInfoMsg": true,
   "cSpell.userWords": ["chunkhash", "jsxdev", "nodir", "purgecss", "tanstack"],
   "cSpell.diagnosticLevel": "Hint",
@@ -284,7 +280,6 @@
     "editor.formatOnType": true
   },
   "aws.resources.enabledResources": ["AWS::EC2::VPC"],
-  "editor.smoothScrolling": true,
   "quokka.showOutputOnStart": false,
   // VS Code inside docker container doesn't fetch on file change, hence this setting
   // "json.schemaDownload.enable": false // Removes JSON schema error. Temporary fix.
@@ -312,5 +307,21 @@
     "comments": "on",
     "strings": "on"
   },
-  "chat.editing.alwaysSaveWithGeneratedChanges": true
+  "chat.editing.alwaysSaveWithGeneratedChanges": true,
+  "typescript.tsserver.maxTsServerMemory": 8192, // 4GB: 4096, 8GB: 8192,
+  "editor.largeFileOptimizations": true,
+  "typescript.referencesCodeLens.enabled": false,
+  "typescript.implementationsCodeLens.enabled": false,
+  "editor.codeLens": false,
+  "editor.smoothScrolling": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "search.exclude": {
+    "**/node_modules/**": true,
+    "**/dist/**": true
+  },
+  "files.watcherExclude": {
+    "**/.git/**": true,
+    "**/node_modules/**": true
+  },
+  "terminal.integrated.scrollback": 1000 // Reduce terminal buffer for faster rendering
 }
