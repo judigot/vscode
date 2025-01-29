@@ -208,6 +208,9 @@
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.codeActionsOnSave": {
     "source.addMissingImports.ts": "always",
     "source.fixAll.eslint": "always",
@@ -241,7 +244,8 @@
     "java": "clear && cd $(echo $dirWithoutTrailingSlash | sed '/\\/\\//g') && javac $fileName && java $fileNameWithoutExt",
     "javascript": "clear && if echo $fullFileName | awk '/tempCodeRunnerFile\\.(javascript|ts|tsx)/ {exit 0} {exit 1}'; then if node -e \"try {require('esbuild-register')} catch (e) {process.exit(1)}\"; then node -r esbuild-register $fullFileName; else deno run --allow-all $fullFileName; fi; else if node -e \"try {require('esbuild-register')} catch (e) {process.exit(1)}\"; then node -r esbuild-register $fullFileName; else deno run --allow-all $fullFileName; fi; fi",
     // "typescript": "clear && if echo $fullFileName | awk '/tempCodeRunnerFile\\.(javascript|ts|tsx)/ {exit 0} {exit 1}'; then if node -e \"try {require('esbuild-register')} catch (e) {process.exit(1)}\"; then node -r esbuild-register $fullFileName; else deno run --allow-all $fullFileName; fi; else if node -e \"try {require('esbuild-register')} catch (e) {process.exit(1)}\"; then node -r esbuild-register $fullFileName; else deno run --allow-all $fullFileName; fi; fi",
-    "typescript": "clear && deno run --allow-all --unstable-sloppy-imports $fullFileName",
+    // "typescript": "clear && deno run --allow-all --unstable-sloppy-imports $fullFileName",
+    "typescript": "clear && bun $fullFileName",
     "typescriptreact": "clear && if echo $fullFileName | awk '/tempCodeRunnerFile\\.(javascript|ts|tsx)/ {exit 0} {exit 1}'; then if node -e \"try {require('esbuild-register')} catch (e) {process.exit(1)}\"; then node -r esbuild-register $fullFileName; else deno run --allow-all $fullFileName; fi; else if node -e \"try {require('esbuild-register')} catch (e) {process.exit(1)}\"; then node -r esbuild-register $fullFileName; else deno run --allow-all $fullFileName; fi; fi",
     "python": "clear && PYTHON_VERSION=$(echo $(python3 --version || python2 --version || python --version) | awk '{split($2, a, \".\"); print a[1]}'); clear; \"python$(echo $PYTHON_VERSION)\"",
     "ruby": "clear && ruby",
