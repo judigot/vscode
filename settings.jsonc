@@ -257,7 +257,7 @@
     "*.code-snippets": "json",
     "compose*.yml": "yaml",
     "docker-compose*.yml": "yaml",
-    "*.css": "tailwindcss",
+    "*.css": "css",
     "*.scss": "scss"
   },
   "explorer.autoReveal": false, // Prevents VS Code from scrolling to the opened file when closing a another file
@@ -277,6 +277,7 @@
   "npm.enableRunFromFolder": true,
   // Add semicolon or not
   "prettier.semi": true,
+  "prettier.tabWidth": 4,
   // User snippets suggestions at the top
   "editor.snippetSuggestions": "top",
   "explorer.compactFolders": false,
@@ -327,5 +328,6 @@
     "**/.git/**": true,
     "**/node_modules/**": true
   },
-  "terminal.integrated.scrollback": 1000 // Reduce terminal buffer for faster rendering
+  "terminal.integrated.scrollback": 1000,
+  "remote.autoForwardPortsSource": "hybrid" // Reduce terminal buffer for faster rendering
 }
