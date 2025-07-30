@@ -80,6 +80,9 @@
   "workbench.activityBar.orientation": "vertical",
   // "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.defaultProfile.windows": "MSYS2",
+  "terminal.integrated.defaultProfile.osx": "MSYS2",
+  "terminal.integrated.defaultProfile.linux": "MSYS2",
+  "terminal.external.windowsExec": "C:/apportable/Programming/Bash.bat",
   "terminal.integrated.profiles.windows": {
     "Git Bash": {
       "path": ["C:/apportable/Programming/PortableGit/bin/bash.exe"],
@@ -118,7 +121,7 @@
     },
     "MSYS2 (MSYS2 Environment)": {
       "path": "C:/apportable/Programming/msys64/usr/bin/bash.exe",
-      "args": ["--login", "-i"],
+      "args": ["--login", "-i", "-c", "source /c/Users/${env:USERNAME}/.bashrc; exec bash"],
       "env": {
         "HOME": "C:/apportable/Programming/msys64/home/${env:USERNAME}",
         "MSYSTEM": "MSYS",
@@ -329,5 +332,10 @@
     "**/node_modules/**": true
   },
   "terminal.integrated.scrollback": 1000,
-  "remote.autoForwardPortsSource": "hybrid" // Reduce terminal buffer for faster rendering
+  "editor.parameterHints.enabled": true,
+  "intelephense.diagnostics.enable": true,
+  "intelephense.diagnostics.argumentCount": true,
+  "remote.autoForwardPortsSource": "hybrid",
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "cursor.general.disableHttp2": true,
 }
