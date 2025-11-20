@@ -15,12 +15,6 @@
   {
     "context": "Editor && mode == full && !read_only",
     "bindings": {
-      "shift-alt-f": ["workspace::SendKeystrokes", "ctrl-shift-p format\n"]
-    }
-  },
-  {
-    "context": "Editor && mode == full && !read_only",
-    "bindings": {
       "ctrl-shift-alt-up": ["workspace::SendKeystrokes", "ctrl-home"],
       "ctrl-shift-alt-down": ["workspace::SendKeystrokes", "ctrl-end"]
     }
@@ -93,6 +87,10 @@
       "ctrl-shift-alt-/": [
         "workspace::SendKeystrokes",
         "g i t space s t a t u s enter"
+      ],
+      "ctrl-shift-alt-m": [
+        "workspace::SendKeystrokes",
+        "g i t space s w i t c h space m a i n enter"
       ]
     }
   }
