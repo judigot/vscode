@@ -9,6 +9,12 @@
 - ESLint: Follow 'plugin:@typescript-eslint/strict-type-checked'.
 - I want short, semantic git commit messages. I want it to be a short summary of the changes made
 
+# Terminal
+
+- Always use MSYS2 bash terminal instead of PowerShell for all terminal commands
+- When running bash commands, explicitly source the .bashrc file: `C:/apportable/Programming/msys64/usr/bin/bash.exe --login -c "source /c/Users/<user>/.bashrc && <command>"`
+- Use bash syntax
+
 # TypeScript/JavaScript
 
 - Never add console.log. You can add console.error
