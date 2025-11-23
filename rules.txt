@@ -14,6 +14,8 @@
 - Always use MSYS2 bash terminal instead of PowerShell for all terminal commands
 - When running bash commands, explicitly source the .bashrc file: `C:/apportable/Programming/msys64/usr/bin/bash.exe --login -c "source /c/Users/<user>/.bashrc && <command>"`
 - Use bash syntax
+- When running bash commands that need aliases or functions from .snippetsrc, explicitly source /c/Users/Jude/.snippetsrc after sourcing .bashrc
+- Use `shopt -s expand_aliases && eval <alias>` when running aliases in non-interactive shells via bash -c
 
 # TypeScript/JavaScript
 
