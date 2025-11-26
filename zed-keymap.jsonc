@@ -37,7 +37,7 @@
       ],
       "ctrl-shift-alt-c": [
         "workspace::SendKeystrokes",
-        "end git clone git@github.com:judigot/repository.git .\ngit status\n"
+        "g i t space c l o n e space g i t @ g i t h u b . c o m : j u d i g o t / r e p o s i t o r y . g i t space .\ng i t space s t a t u s\n"
       ]
     }
   },
@@ -49,7 +49,12 @@
         "workspace::SendKeystrokes",
         "ctrl-` clear && pnpm build && pnpm start\n"
       ],
-      "f10": ["task::Spawn", { "task_name": "dev server" }]
+      "f10": [
+        "task::Spawn",
+        {
+          "task_name": "dev server"
+        }
+      ]
     }
   },
   {
@@ -83,7 +88,12 @@
         "workspace::SendKeystrokes",
         "clear space && space pnpm space build space && space pnpm space start\n"
       ],
-      "f10": ["task::Spawn", { "task_name": "dev server" }],
+      "f10": [
+        "task::Spawn",
+        {
+          "task_name": "dev server"
+        }
+      ],
       "ctrl-shift-alt-/": [
         "workspace::SendKeystrokes",
         "g i t space s t a t u s enter"
