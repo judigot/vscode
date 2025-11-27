@@ -260,6 +260,39 @@
         "when": "!terminalFocus"
     },
     {
+        /**************************
+         * GIT: LINK TO GIT NOTES *
+         **************************/
+        "key": "ctrl+shift+alt+g",
+        "command": "type",
+        "args": {
+            "text": "Git Notes URL:\nhttps://petalite-parent-84e.notion.site/Git-1ca4e6c9b7dd80e28363c8bcc220fb32#1fb4e6c9b7dd800d807ae4d40f9c1a6c\n"
+        },
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        /*************************
+         * GIT: REVERT TO STABLE *
+         *************************/
+        "key": "ctrl+shift+alt+r",
+        "command": "type",
+        "args": {
+            "text": "git revert --no-commit INSERT_COMMIT_HASH_HERE..HEAD\ngit commit -m \"Revert to previous commit without losing history\"\ngit push origin HEAD\ngit status\n"
+        },
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        /*********************
+         * GIT: EMPTY COMMIT *
+         *********************/
+        "key": "ctrl+shift+alt+e",
+        "command": "type",
+        "args": {
+            "text": "git commit --allow-empty -m \"chore: stable version\" && git push origin\ngit status\n"
+        },
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
         /*************************
          * GIT: CLONE REPOSITORY *
          *************************/
