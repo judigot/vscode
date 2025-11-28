@@ -16,6 +16,7 @@
 - Use bash syntax
 - When running bash commands that need aliases or functions from .snippetsrc, explicitly source /c/Users/Jude/.snippetsrc after sourcing .bashrc
 - Use `shopt -s expand_aliases && eval <alias>` when running aliases in non-interactive shells via bash -c
+- If you need to change the same code like one-liners across multiple files, use terminal commands rather than changing the files manually.
 
 # TypeScript/JavaScript
 
