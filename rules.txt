@@ -1,6 +1,6 @@
 # General
 
-- Don't add comments. I want the code to be self-documenting.
+- I want the code to be self-documenting.
 - Don't suggest to run terminal commands.
 - I prefer readable code that I can go back to after a long time and still be able to understand it.
 - Use "current datetime" for chat titles.
