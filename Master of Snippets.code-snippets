@@ -917,7 +917,7 @@
         "body": ["\"\"\"", "${1:Line 1", "Line 2", "Line 3}", "\"\"\""],
         "scope": "java"
     },
-  
+
     //====================JAVA====================//
     //====================BASH====================//
     "Boilerplate (Bash)": {
@@ -925,7 +925,9 @@
         "body": [
             "#!/bin/bash",
             "",
-            "${1:GLOBAL_VARIABLE=\"Hello, World!\"",
+            "readonly ${1:GLOBAL_VARIABLE=\"Hello, World!\"",
+            "",
+            "readonly PROJECT_DIRECTORY=\"\\$(CDPATH= cd -- \"$(dirname -- \"\\$0\")\" && pwd)\" # Directory of this script",
             "",
             "main() {",
             "    action1",
@@ -933,10 +935,12 @@
             "\\}",
             "",
             "action1() {",
+            "    cd \\$PROJECT_DIRECTORY",
             "    echo -e \"Action 1\"",
             "\\}",
             "",
             "action2() {",
+            "    cd \\$PROJECT_DIRECTORY",
             "    echo -e \"Action 2\"",
             "\\}",
             "",
@@ -1315,7 +1319,7 @@
         ],
         "scope": "ruby"
     },
-  
+
     "Iterate an Array (Ruby)": {
         "prefix": "iterateArray",
         "body": [
@@ -1382,7 +1386,7 @@
         "body": ["${1:objectVariable} == ${2:objectVariable2}"],
         "scope": "ruby"
     },
-  
+
     "Print to Console (Ruby)": {
         "prefix": "log",
         "body": ["puts ${2:\"${1:Hello, World!}\"}"],
@@ -1559,7 +1563,7 @@
         "body": ["<<-STRING", "${1:Line 1", "Line 2", "Line 3}", "STRING"],
         "scope": "ruby"
     },
-  
+
     // Ruby Extras
     "Type (Ruby)": {
         "prefix": "type",
@@ -1687,7 +1691,7 @@
     "Function (TypeScript/JavaScript)": {
         "prefix": "function",
         "body": [
-            "function ${1:functionName}(${2:{ key1, key2 \\}: { key1: string; key2: string }}) {",
+            "function ${1:functionName}(${2:{ key1, key2 \\}: { key1: string; key2: string \\}}) {",
             "  return `\\${key1} \\${key2}`;",
             "}"
         ],
@@ -1733,19 +1737,19 @@
             "  const commitTransaction = () => {};",
             "  // Start transaction",
             "  const result = startTransaction();",
-  
+
             "  // Catch transaction errors",
             "  if (!result) {",
             "    throw new Error(\"There was an error during the transaction\");",
             "  }",
-  
+
             "  // Perform transaction if there are no errors",
             "  commitTransaction();",
             "} catch (error) {",
             "  const rollbackTransaction = () => {};",
             "  // Handle errors",
             "  console.error(\"Error:\", error.message);",
-  
+
             "  // Roll back transaction",
             "  rollbackTransaction();",
             "} finally {",
@@ -1756,13 +1760,13 @@
         ],
         "scope": "typescript, javascript, typescriptreact, javascriptreact"
     },
-  
+
     "For Loop N Times (TypeScript/JavaScript)": {
         "prefix": "forLoop; loop; loopNTimes; loopANumberOfTimes",
         "body": ["for (let i = 0; i < ${1:10}; i++) {", "  ${2:// Code}", "}"],
         "scope": "typescript, javascript, typescriptreact, javascriptreact"
     },
-  
+
     "For Loop (TypeScript/JavaScript)": {
         "prefix": "forLoop; loop",
         "body": [
@@ -1815,7 +1819,7 @@
         ],
         "scope": "typescript, javascript, typescriptreact, javascriptreact"
     },
-  
+
     "Iterate an Array (TypeScript/JavaScript)": {
         "prefix": "iterateArray",
         "body": [
@@ -1857,19 +1861,19 @@
         "body": ["${1:stringVariable} === ${2:stringVariable2}"],
         "scope": "typescript, javascript, typescriptreact, javascriptreact"
     },
-  
+
     "Compare Numbers (TypeScript/JavaScript)": {
         "prefix": "compareNumbers",
         "body": ["${1:numberVariable} === ${2:numberVariable2}"],
         "scope": "typescript, javascript, typescriptreact, javascriptreact"
     },
-  
+
     "Compare Booleans (TypeScript/JavaScript)": {
         "prefix": "compareBooleans",
         "body": ["${1:booleanVariable} === ${2:booleanVariable2}"],
         "scope": "typescript, javascript, typescriptreact, javascriptreact"
     },
-  
+
     "Compare Arrays (TypeScript/JavaScript)": {
         "prefix": "compareArrays",
         "body": [
@@ -1877,7 +1881,7 @@
         ],
         "scope": "typescript, javascript, typescriptreact, javascriptreact"
     },
-  
+
     "Compare Objects (TypeScript/JavaScript)": {
         "prefix": "compareObjects",
         "body": [
@@ -2154,7 +2158,7 @@
         ],
         "scope": "typescript, javascript, typescriptreact, javascriptreact"
     },
-  
+
     // TypeScript Extras; JavaScript Extras
     "Export Default Statement (TypeScript/JavaScript)": {
         "prefix": "exportDefault",
@@ -2575,5 +2579,4 @@
         "scope": "html"
     }
     //====================HTML====================//
-  }
-  
+}
