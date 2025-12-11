@@ -41,20 +41,33 @@
 - Block Comments: Use `/* This is a comment */` for inline comments.
 - SQL: Use heredoc syntax.
 
-# Bash
+# Shell/Bash
 
 - Avoid grep; prefer awk.
 - Follow this structure in script files:
 
-  ```bash
-  #!/bin/bash
-  # Global variables here
+  ```shell
+  #!/bin/sh
+  
+  readonly GLOBAL_VARIABLE="Hello, World!"
+  
+  readonly PROJECT_DIRECTORY=$(cd "$(dirname "$0")" || exit 1; pwd) # Directory of this script
+  
   main() {
       action1
+      action2
   }
+  
   action1() {
-      echo -e "Action 1"
+      cd "$PROJECT_DIRECTORY" || exit 1
+      printf '%s\n' "Action 1"
   }
-  main
+  
+  action2() {
+      cd "$PROJECT_DIRECTORY" || exit 1
+      printf '%s\n' "Action 2"
+  }
+  
+  main "$@"
   ```
 - Omit unused global variables.
