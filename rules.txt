@@ -11,6 +11,7 @@
 
 # Terminal
 
+- Write all shell scripts and command examples as POSIX-compliant `sh` scripts, avoiding Bash/Zsh-specific features.
 - Always use MSYS2 bash terminal instead of PowerShell for all terminal commands
 - When running bash commands, explicitly source the .bashrc file: `C:/apportable/Programming/msys64/usr/bin/bash.exe --login -c "source /c/Users/<user>/.bashrc && <command>"`
 - Use bash syntax
