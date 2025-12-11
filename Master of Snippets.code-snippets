@@ -920,36 +920,35 @@
 
     //====================JAVA====================//
     //====================BASH====================//
-    "Boilerplate (Bash)": {
+    "Boilerplate (Shell)": {
         "prefix": "boilerplate",
         "body": [
-            "#!/bin/bash",
+            "#!/bin/sh",
             "",
-            "readonly ${1:GLOBAL_VARIABLE=\"Hello, World!\"",
+            "readonly ${1:GLOBAL_VARIABLE=\"Hello, World!\"}",
             "",
-            "readonly PROJECT_DIRECTORY=\"\\$(CDPATH= cd -- \"$(dirname -- \"\\$0\")\" && pwd)\" # Directory of this script",
+            "readonly PROJECT_DIRECTORY=$(cd \"$(dirname \"\\$0\")\" || exit 1; pwd) # Directory of this script",
             "",
             "main() {",
             "    action1",
             "    action2",
-            "\\}",
+            "}",
             "",
             "action1() {",
-            "    cd \\$PROJECT_DIRECTORY",
-            "    echo -e \"Action 1\"",
-            "\\}",
+            "    cd \"\\$PROJECT_DIRECTORY\" || exit 1",
+            "    printf '%s\\\\n' \"Action 1\"",
+            "}",
             "",
             "action2() {",
-            "    cd \\$PROJECT_DIRECTORY",
-            "    echo -e \"Action 2\"",
-            "\\}",
+            "    cd \"\\$PROJECT_DIRECTORY\" || exit 1",
+            "    printf '%s\\\\n' \"Action 2\"",
+            "}",
             "",
-            "main",
-            "}"
+            "main \"\\$@\""
         ],
         "scope": "shellscript"
     },
-    "Fetch (Bash)": {
+    "Fetch (Shell)": {
         "prefix": "fetchUsingBash",
         "body": [
             "result=\\$(",
@@ -973,13 +972,13 @@
         ],
         "scope": "shellscript"
     },
-    "String Array (Bash)": {
+    "String Array (Shell)": {
         "prefix": "varArrayOfText; arrayOfStringsVariable",
         "body": ["arrayOfStringsVariable=(\"Hello\" \"World!\")"],
-        "description": "String Array (Bash)",
+        "description": "String Array (Shell)",
         "scope": "shellscript"
     },
-    "Convert Array/Object to String (Bash)": {
+    "Convert Array/Object to String (Shell)": {
         "prefix": "serialize; serializeData; stringer",
         "body": [
             "json=\"{\"",
@@ -991,17 +990,17 @@
             "json=\"\\${json%,}}\"",
             "echo \"\\$json\""
         ],
-        "description": "Convert Array/Object to String (Bash)",
+        "description": "Convert Array/Object to String (Shell)",
         "scope": "shellscript"
     },
-    "Load Remote Script (Bash)": {
+    "Load Remote Script (Shell)": {
         "prefix": "importRemoteScriptFromGithub; loadImportScriptFromGithub; importScriptFromGithub; loadScriptFromGithub;",
         "body": [
             "source <(curl -fsSL \"https://raw.githubusercontent.com/user/repository/main/file.txt\")"
         ],
         "scope": "shellscript"
     },
-    "Object Variable (Bash)": {
+    "Object Variable (Shell)": {
         "prefix": "varObject; objectVariable",
         "body": [
             "declare -A objectVariable=(",
@@ -1011,12 +1010,12 @@
         ],
         "scope": "shellscript"
     },
-    "Pause (Bash)": {
+    "Pause (Shell)": {
         "prefix": "pause",
         "body": ["read -n 1 -s -r -p \"Press any key to continue...\""],
         "scope": "shellscript"
     },
-    "If-Else Statement (Bash)": {
+    "If-Else Statement (Shell)": {
         "prefix": "ifElse",
         "body": [
             "if []; then",
@@ -1030,7 +1029,7 @@
         ],
         "scope": "shellscript"
     },
-    "If Conditions (Bash)": {
+    "If Conditions (Shell)": {
         "prefix": "ifConditions",
         "body": [
             "if []; then",
@@ -1062,22 +1061,22 @@
         ],
         "scope": "shellscript"
     },
-    "Print to Console (Bash)": {
+    "Print to Console (Shell)": {
         "prefix": "log",
         "body": ["echo -e ${2:\"${1:Hello, World!}\"}"],
         "scope": "shellscript"
     },
-    "Print Red to Console (Bash)": {
+    "Print Red to Console (Shell)": {
         "prefix": "logRed",
         "body": ["echo -e \"\\e[31m${1:Hello, World!}\\e[0m\" # Red"],
         "scope": "shellscript"
     },
-    "Print Yellow to Console (Bash)": {
+    "Print Yellow to Console (Shell)": {
         "prefix": "logYellow",
         "body": ["echo -e \"\\e[33m${1:Hello, World!}\\e[0m\" # Yellow"],
         "scope": "shellscript"
     },
-    "Print Green to Console (Bash)": {
+    "Print Green to Console (Shell)": {
         "prefix": "logGreen",
         "body": ["echo -e \"\\e[32m${1:Hello, World!}\\e[0m\" # Green"],
         "scope": "shellscript"
