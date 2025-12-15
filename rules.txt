@@ -9,6 +9,14 @@
 - ESLint: Follow 'plugin:@typescript-eslint/strict-type-checked'.
 - I want short, semantic git commit messages. I want it to be a short summary of the changes made
 
+# Comment Rules
+
+- Only add useful comments.
+- Don't add obvious comments.
+- Comment like how a senior-level engineer would
+- Don't comment on architectural decisions that are self-evident from code structure
+- Don't add "explanation comments" that restate what the code already makes clear
+
 # Terminal
 
 - Write all shell scripts and command examples as POSIX-compliant `sh` scripts, avoiding Bash/Zsh-specific features.
